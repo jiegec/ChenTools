@@ -148,11 +148,7 @@ public class ChenToolsGUI extends javax.swing.JFrame implements InputOutput {
 											.browse(new java.net.URI(
 													"https://github.com/wiadufachen/ChenTools/blob/master/ChenTools.jar?raw=true"));
 								} catch (IOException e1) {
-									// TODO Auto-generated catch block
-									e1.printStackTrace();
 								} catch (URISyntaxException e1) {
-									// TODO Auto-generated catch block
-									e1.printStackTrace();
 								}
 						}
 					});

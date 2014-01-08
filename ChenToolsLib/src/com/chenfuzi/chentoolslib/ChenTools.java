@@ -20,7 +20,7 @@ public class ChenTools {
 			"2.已知二次函数顶点(x,y)，经过点(x0,y0)。", "3.已知二次函数过两点(x1,y1)(x2,y2)，对称轴x=z。",
 			"4.输入一组数据，得出众数、中位数、平均数、方差、标准差、极差。", "5.求一个表达式的值（只能输入+-*/()和数字）。",
 			"6.已知一次函数过(x1,y1),(x2,y2),求一次函数解析式", "7.输入一个二次函数解析式，输出二次函数的信息" };
-	public static String version = "2014.01.07.8";
+	public static String version = "2014.01.08.9";
 
 	public interface InputOutput {
 		void writeToConsole(String str);
@@ -42,8 +42,6 @@ public class ChenTools {
 		try {
 			url = new URL(httpUrl);
 		} catch (MalformedURLException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
 			return "";
 		}
 
@@ -53,10 +51,8 @@ public class ChenTools {
 			Scanner s = new Scanner(inStream).useDelimiter("\\A");
 			return s.hasNext() ? s.next() : "";
 		} catch (FileNotFoundException e) {
-			e.printStackTrace();
 			return "";
 		} catch (IOException e) {
-			e.printStackTrace();
 			return "";
 		}
 	}
@@ -220,7 +216,24 @@ public class ChenTools {
 			Integer num = 1, i;
 			io.writeToConsole("\n请输入数据个数");
 			do {
-				num = getInteger();
+				String d;
+				io.wantNumber();
+				while (true) {
+					d = io.getInput();
+					try {
+						num = Integer.valueOf(d);
+					} catch (Exception e) {
+						io.inputError();
+						continue;
+					}
+					break;
+				}
+				if(num <= 0)
+				{
+					io.inputError();
+					continue;
+				}
+				io.writeToConsole(d);
 			} while (num.intValue() <= 0);
 			ArrayList<Double> nums = new ArrayList<Double>(num);
 			Double sum = 0.0;
@@ -248,7 +261,7 @@ public class ChenTools {
 			Collections.sort(temp);
 			Map<Double, Integer> m = new HashMap<Double, Integer>();
 			if (num == 1) {
-				io.writeToConsole("\n:众数：" + String.valueOf(nums.get(i)));
+				io.writeToConsole("\n:众数：" + String.valueOf(nums.get(0)));
 			} else {
 				Double prev = temp.get(0), cur;
 				Integer curnum = 1;
