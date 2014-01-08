@@ -1,0 +1,178 @@
+StringToArithmetic.java Copied from http://128kj.iteye.com/blog/1623312
+中缀表达式转后缀表达式并求值(java)
+
+博客分类： 数据结构练习题（java解答）
+javastack 
+   前缀表达式、中缀表达式和后缀表达式都是对表达式的记法，因此也被称为前缀记法、中缀记法和后缀记法。它们之间的区别在于运算符相对与操作数的位置不同：前缀表达式的运算符位于与其相关的操作数之前；中缀和后缀同理。 
+
+举例： 
+(3 + 4) × 5 - 6 就是中缀表达式 
+- × + 3 4 5 6 前缀表达式 
+3 4 + 5 × 6 - 后缀表达式 
+
+中缀表达式（中缀记法） 
+  中缀表达式是一种通用的算术或逻辑公式表示方法，操作符以中缀形式处于操作数的中间。中缀表达式是人们常用的算术表示方法。 
+  虽然人的大脑很容易理解与分析中缀表达式，但对计算机来说中缀表达式却是很复杂的，因此计算表达式的值时，通常需要先将中缀表达式转换为前缀或后缀表达式，然后再进行求值。对计算机来说，计算前缀或后缀表达式的值非常简单。 
+
+前缀表达式（前缀记法、波兰式） 
+   前缀表达式的运算符位于操作数之前。 
+
+后缀表达式与前缀表达式类似，只是运算符位于操作数之后。 
+
+
+1、将中缀表达式转换为后缀表达式： 
+
+(1)当读到数字直接送至输出队列中； 
+(2)当读到运算符t时： 
+     a.将栈中所有优先级高于或等于t的运算符弹出，送到输出队列中； 
+　  b.t进栈； 
+（3）读到左括号时总是将它压入栈中； 
+（4）读到右括号时，将靠近栈顶的第一个左括号上面的运算符全部依次弹出，送至输出队列后，再丢弃左括号； 
+（5）中缀表达式全部读完后，若栈中仍有运算符，将其送到输出队列中。 
+
+2、 运用后缀表达式进行计算： 
+　　 (1)建立一个栈S； 
+　　 (2)从左到右读后缀表达式，读到数字就将它转换为数值压入栈S中，读到运算符则从栈中依次弹出两个数分别到Y和X，然后以“X 运算符 Y”的形式计算机出结果，再压加栈S中； 
+　　 (3)如果后缀表达式未读完，就重复上面过程，最后输出栈顶的数值则为结束。 
+
+Java代码  收藏代码
+import java.util.Stack;  
+import java.util.regex.*;  
+  
+public class StringToArithmetic {  
+    private StringToArithmetic() {  
+    }  
+  
+    /** 
+     * 给出一个算术表达式，返回结果。 例如 (5+8+10)*1，返回23 
+     *  
+     * @param string 
+     */  
+    public static double stringToArithmetic(String string) {  
+        return suffixToArithmetic(infixToSuffix(string));  
+    }  
+  
+    /** 
+     * 中缀表达式转后缀表达式 
+     * 只处理了+,-,*,/和括号，没有处理负号及其它运算符，也没对前缀表达式验证。 
+     * 如要处理负号，可对表达式进行预转义处理，当下面条件成立时，将负号换成单目运算符"!" 
+     *    infix.charAt[i]=='-'&&( i==0||infix.charAt[i-1]=='(') 
+     */  
+    private static String infixToSuffix(String infix) {  
+        Stack<Character> stack = new Stack<Character>();  
+        String suffix = "";  
+        int length = infix.length();  
+        for (int i = 0; i < length; i++) {  
+            Character temp;  
+            char c = infix.charAt(i);  
+            switch (c) {  
+            // 忽略空格  
+            case ' ':  
+                break;  
+            // 碰到'('，push到栈  
+            case '(':  
+                stack.push(c);  
+                break;  
+            // 碰到'+''-'，将栈中所有运算符弹出，送到输出队列中  
+            case '+':  
+            case '-':  
+                while (stack.size() != 0) {  
+                    temp = stack.pop();  
+                    if (temp == '(') {  
+                        stack.push('(');  
+                        break;  
+                    }  
+                    suffix += " " + temp;  
+                }  
+                stack.push(c);  
+                suffix += " ";  
+                break;  
+            // 碰到'*''/'，将栈中所有乘除运算符弹出，送到输出队列中  
+            case '*':  
+            case '/':  
+                while (stack.size() != 0) {  
+                    temp = stack.pop();  
+                    if (temp == '(' || temp == '+' || temp == '-') {  
+                        stack.push(temp);  
+                        break;  
+                    } else {  
+                        suffix += " " + temp;  
+                    }  
+                }  
+                stack.push(c);  
+                suffix += " ";  
+                break;  
+        // 碰到右括号，将靠近栈顶的第一个左括号上面的运算符全部依次弹出，送至输出队列后，再丢弃左括号  
+            case ')':  
+                while (stack.size() != 0) {  
+                    temp = stack.pop();  
+                    if (temp == '(')  
+                        break;  
+                    else  
+                        suffix += " " + temp;  
+                }  
+                //suffix += " ";  
+                break;  
+            default:  
+                suffix += c;  
+            }  
+        }  
+        while (stack.size() != 0)  
+            suffix += " " + stack.pop();  
+        return suffix;  
+    }  
+  
+    public static void main(String args[]){  
+         System.out.println(infixToSuffix("3+(2-5)*6/3"));  
+         System.out.println(stringToArithmetic("3+(2-5)*6/3"));  
+    }  
+  
+    /** 
+     * 通过后缀表达式求出算术结果 
+     *  
+     * @param String 
+     *            postfix 
+     * @return double 
+     */  
+    private static double suffixToArithmetic(String postfix) {  
+        Pattern pattern = Pattern.compile("\\d+||(\\d+\\.\\d+)"); // 匹配数字  
+        String strings[] = postfix.split(" ");  
+        for (int i = 0; i < strings.length; i++)  
+          strings[i].trim();  
+       Stack<Double> stack = new Stack<Double>();  
+        for (int i = 0; i < strings.length; i++) {  
+              
+            if (strings[i].equals(""))  
+                continue;  
+            if ((pattern.matcher(strings[i])).matches()) {  
+                 
+                stack.push(Double.parseDouble(strings[i]));  
+            } else {  
+                 
+                double y = stack.pop();  
+                double x = stack.pop();  
+                stack.push(caculate(x, y, strings[i]));  
+            }  
+        }  
+        return stack.pop();  
+        
+         
+    }  
+  
+    private static double caculate(double x, double y, String simble) {  
+        if (simble.trim().equals("+"))  
+            return x + y;  
+        if (simble.trim().equals("-"))  
+            return x - y;  
+        if (simble.trim().equals("*"))  
+            return x * y;  
+        if (simble.trim().equals("/"))  
+            return x / y;  
+        return 0;  
+    }  
+}  
+
+
+下载源码：
+StringToArithmetic.zip (1.4 KB)
+下载次数: 11
