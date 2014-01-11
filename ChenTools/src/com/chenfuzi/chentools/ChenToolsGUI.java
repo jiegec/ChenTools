@@ -59,6 +59,9 @@ public class ChenToolsGUI extends javax.swing.JFrame implements InputOutput {
 		initGUI();
 	}
 
+	boolean syncLock;
+	public static ChenToolsGUI inst;
+
 	private void initGUI() {
 		try {
 			setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
@@ -108,6 +111,8 @@ public class ChenToolsGUI extends javax.swing.JFrame implements InputOutput {
 			e.printStackTrace();
 		}
 		ChenTools.io = this;
+		inst = this;
+		syncLock = true;
 		Thread thread = new Thread(new Runnable() {
 			@Override
 			public void run() {
@@ -195,7 +200,10 @@ public class ChenToolsGUI extends javax.swing.JFrame implements InputOutput {
 			flag = true;
 			enterbutton.setEnabled(true);
 			entertext.requestFocusInWindow();
-			ChenToolsGUI.this.wait();
+			while (syncLock == true) {
+				ChenToolsGUI.inst.wait();
+			}
+			syncLock = true;
 			ret = entertext.getText().toString();
 			entertext.setText("");
 		}
@@ -209,6 +217,7 @@ public class ChenToolsGUI extends javax.swing.JFrame implements InputOutput {
 
 	private synchronized void enterbuttonActionPerformed(ActionEvent evt) {
 		try {
+			syncLock = false;
 			ChenToolsGUI.this.notifyAll();
 		} catch (Exception e) {
 			e.printStackTrace();
