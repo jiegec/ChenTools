@@ -20,7 +20,7 @@ public class ChenTools {
 			"2.已知二次函数顶点(x,y)，经过点(x0,y0)。", "3.已知二次函数过两点(x1,y1)(x2,y2)，对称轴x=z。",
 			"4.输入一组数据，得出众数、中位数、平均数、方差、标准差、极差。", "5.求一个表达式的值（只能输入+-*/()和数字）。",
 			"6.已知一次函数过(x1,y1),(x2,y2),求一次函数解析式", "7.输入一个二次函数解析式，输出二次函数的信息" };
-	public static String version = "2014.01.12.10";
+	public static String version = "2014.01.12.11";
 
 	public interface InputOutput {
 		void writeToConsole(String str);
