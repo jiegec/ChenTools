@@ -1,9 +1,6 @@
 package com.chenfuzi.chentoolslib;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.io.InputStream;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
@@ -19,8 +16,9 @@ public class ChenTools {
 			"1.已知二次函数过三点(x1,y1)(x2,y2)(x3,y3)求二次函数解析式。",
 			"2.已知二次函数顶点(x,y)，经过点(x0,y0)。", "3.已知二次函数过两点(x1,y1)(x2,y2)，对称轴x=z。",
 			"4.输入一组数据，得出众数、中位数、平均数、方差、标准差、极差。", "5.求一个表达式的值（只能输入+-*/()和数字）。",
-			"6.已知一次函数过(x1,y1),(x2,y2),求一次函数解析式", "7.输入一个二次函数解析式，输出二次函数的信息" };
-	public static String version = "2014.01.12.11";
+			"6.已知一次函数过(x1,y1),(x2,y2),求一次函数解析式", "7.输入一个二次函数解析式，输出二次函数的信息",
+			"8.测试能否上指定网址" };
+	public static String version = "2014.01.23.14";
 
 	public interface InputOutput {
 		void writeToConsole(String str);
@@ -36,25 +34,37 @@ public class ChenTools {
 
 	public static InputOutput io;
 
-	@SuppressWarnings("resource")
 	public static String httpDownload(String httpUrl) {
 		URL url = null;
-		try {
+		URLConnection conn = null;
+		InputStream inStream = null;
+		Scanner s = null;
+		String ret = "";
+		try
+		{
 			url = new URL(httpUrl);
-		} catch (MalformedURLException e1) {
-			return "";
+			conn = url.openConnection();
+			inStream = conn.getInputStream();
+			s = new Scanner(inStream).useDelimiter("\\A");
+			ret = s.hasNext() ? s.next(): "";
+		}catch(Exception e)
+		{
+			ret = "";
+		}finally
+		{			
+			try {
+				if(s != null)
+				{
+					s.close();
+				}
+				if(inStream != null)
+				{
+					inStream.close();
+				}				
+			} catch (Exception e) {
+			}
 		}
-
-		try {
-			URLConnection conn = url.openConnection();
-			InputStream inStream = conn.getInputStream();
-			Scanner s = new Scanner(inStream).useDelimiter("\\A");
-			return s.hasNext() ? s.next() : "";
-		} catch (FileNotFoundException e) {
-			return "";
-		} catch (IOException e) {
-			return "";
-		}
+		return ret;
 	}
 
 	private static Double getDouble() throws InterruptedException {
@@ -75,6 +85,7 @@ public class ChenTools {
 		return ret;
 	}
 
+	@SuppressWarnings("unused")
 	private static Integer getInteger() throws InterruptedException {
 		String d;
 		Integer ret;
@@ -115,6 +126,9 @@ public class ChenTools {
 			break;
 		case 7:
 			tool7();
+			break;
+		case 8:
+			tool8();
 			break;
 		default:
 			break;
@@ -322,6 +336,10 @@ public class ChenTools {
 		try {
 			while (true) {
 				input = io.getInput();
+				if (input.length() == 0) {
+					io.inputError();
+					continue;
+				}
 				Character c;
 				Integer i;
 				for (i = 0; i < input.length(); i++) {
@@ -390,6 +408,64 @@ public class ChenTools {
 				io.writeToConsole("\n2个相同的实数根");
 			}
 			io.writeToConsole("\n对称轴：y=" + String.valueOf(-b / 2 / a));
+		} catch (InterruptedException e) {
+
+		}
+	}
+
+	public static boolean canConnectTo(String httpUrl) {
+		URL url = null;
+		URLConnection conn = null;
+		InputStream inStream = null;
+		Scanner s = null;
+		boolean ret = false;
+		try
+		{
+			url = new URL(httpUrl);
+			conn = url.openConnection();
+			inStream = conn.getInputStream();
+			s = new Scanner(inStream).useDelimiter("\\A");
+			ret = s.hasNext() ? (s.next().length() != 0 ? true : false)
+					: false;
+		}catch(Exception e)
+		{
+			ret = false;
+		}finally
+		{			
+			try {
+				if(s != null)
+				{
+					s.close();
+				}
+				if(inStream != null)
+				{
+					inStream.close();
+				}				
+			} catch (Exception e) {
+			}
+		}
+		return ret;
+	}
+
+	private static void tool8() {
+		io.writeToConsole("\n输入网址：");
+		String input;
+		io.wantText();
+		try {
+			while (true) {
+				input = io.getInput();
+				if (input.length() == 0) {
+					io.inputError();
+					continue;
+				}
+				break;
+			}
+			io.writeToConsole(input);
+			if (canConnectTo(input) == true) {
+				io.writeToConsole("\n连接成功！");
+			} else {
+				io.writeToConsole("\n连接失败！");
+			}
 		} catch (InterruptedException e) {
 
 		}

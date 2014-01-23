@@ -1473,6 +1473,8 @@ com.chenfuzi.chentoolslib.ChenTools -> com.chenfuzi.a.a:
     void tool5() -> f
     void tool6() -> g
     void tool7() -> h
+    boolean canConnectTo(java.lang.String) -> b
+    void tool8() -> i
 com.chenfuzi.chentoolslib.ChenTools$1 -> com.chenfuzi.a.b:
     int compare(java.util.Map$Entry,java.util.Map$Entry) -> a
     int compare(java.lang.Object,java.lang.Object) -> compare

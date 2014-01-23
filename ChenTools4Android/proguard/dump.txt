@@ -57054,7 +57054,7 @@ _____________________________________________________________________
 
 Interfaces (count = 0):
 
-Constant Pool (count = 333):
+Constant Pool (count = 347):
   + String []
   + String [
 2个不相同的实数根]
@@ -57123,24 +57123,29 @@ z=]
   + String [
 请输入数据个数]
   + String [
+输入网址：]
+  + String [
 输入表达式：]
+  + String [
+连接失败！]
+  + String [
+连接成功！]
   + String [,]
   + String [1.已知二次函数过三点(x1,y1)(x2,y2)(x3,y3)求二次函数解析式。]
   + String [2.已知二次函数顶点(x,y)，经过点(x0,y0)。]
-  + String [2014.01.12.11]
+  + String [2014.01.23.14]
   + String [3.已知二次函数过两点(x1,y1)(x2,y2)，对称轴x=z。]
   + String [4.输入一组数据，得出众数、中位数、平均数、方差、标准差、极差。]
   + String [5.求一个表达式的值（只能输入+-*/()和数字）。]
   + String [6.已知一次函数过(x1,y1),(x2,y2),求一次函数解析式]
   + String [7.输入一个二次函数解析式，输出二次函数的信息]
+  + String [8.测试能否上指定网址]
   + String [\A]
   + String [请选择你想要的工具。]
   + Class [com/chenfuzi/a/a]
   + Class [com/chenfuzi/a/b]
   + Class [com/chenfuzi/a/c]
   + Class [com/chenfuzi/a/d]
-  + Class [java/io/FileNotFoundException]
-  + Class [java/io/IOException]
   + Class [java/io/InputStream]
   + Class [java/lang/Character]
   + Class [java/lang/Double]
@@ -57151,7 +57156,7 @@ z=]
   + Class [java/lang/Object]
   + Class [java/lang/String]
   + Class [java/lang/StringBuilder]
-  + Class [java/net/MalformedURLException]
+  + Class [java/lang/Throwable]
   + Class [java/net/URL]
   + Class [java/net/URLConnection]
   + Class [java/util/ArrayList]
@@ -57170,14 +57175,17 @@ z=]
   + Methodref [com/chenfuzi/a/a.a (Ljava/lang/Double;Ljava/lang/Double;)V]
   + Methodref [com/chenfuzi/a/a.a (Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/Double;)V]
   + Methodref [com/chenfuzi/a/a.b ()V]
+  + Methodref [com/chenfuzi/a/a.b (Ljava/lang/String;)Z]
   + Methodref [com/chenfuzi/a/a.c ()V]
   + Methodref [com/chenfuzi/a/a.d ()V]
   + Methodref [com/chenfuzi/a/a.e ()V]
   + Methodref [com/chenfuzi/a/a.f ()V]
   + Methodref [com/chenfuzi/a/a.g ()V]
   + Methodref [com/chenfuzi/a/a.h ()V]
+  + Methodref [com/chenfuzi/a/a.i ()V]
   + Methodref [com/chenfuzi/a/b.<init> ()V]
   + Methodref [com/chenfuzi/a/d.a (Ljava/lang/String;)D]
+  + Methodref [java/io/InputStream.close ()V]
   + Methodref [java/lang/Character.charValue ()C]
   + Methodref [java/lang/Character.valueOf (C)Ljava/lang/Character;]
   + Methodref [java/lang/Double.doubleValue ()D]
@@ -57208,6 +57216,7 @@ z=]
   + Methodref [java/util/Collections.sort (Ljava/util/List;Ljava/util/Comparator;)V]
   + Methodref [java/util/HashMap.<init> ()V]
   + Methodref [java/util/Scanner.<init> (Ljava/io/InputStream;)V]
+  + Methodref [java/util/Scanner.close ()V]
   + Methodref [java/util/Scanner.hasNext ()Z]
   + Methodref [java/util/Scanner.next ()Ljava/lang/String;]
   + Methodref [java/util/Scanner.useDelimiter (Ljava/lang/String;)Ljava/util/Scanner;]
@@ -57235,12 +57244,14 @@ z=]
   + NameAndType [add (Ljava/lang/Object;)Z]
   + NameAndType [append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
   + NameAndType [b ()V]
+  + NameAndType [b (Ljava/lang/String;)Z]
   + NameAndType [b Ljava/lang/String;]
   + NameAndType [c ()V]
   + NameAndType [c Lcom/chenfuzi/a/c;]
   + NameAndType [charAt (I)C]
   + NameAndType [charValue ()C]
   + NameAndType [clone ()Ljava/lang/Object;]
+  + NameAndType [close ()V]
   + NameAndType [d ()V]
   + NameAndType [doubleValue ()D]
   + NameAndType [e ()V]
@@ -57255,6 +57266,7 @@ z=]
   + NameAndType [getValue ()Ljava/lang/Object;]
   + NameAndType [h ()V]
   + NameAndType [hasNext ()Z]
+  + NameAndType [i ()V]
   + NameAndType [intValue ()I]
   + NameAndType [length ()I]
   + NameAndType [next ()Ljava/lang/String;]
@@ -57341,7 +57353,13 @@ z=]
   + Utf8 [
 请输入数据个数]
   + Utf8 [
+输入网址：]
+  + Utf8 [
 输入表达式：]
+  + Utf8 [
+连接失败！]
+  + Utf8 [
+连接成功！]
   + Utf8 [()C]
   + Utf8 [()D]
   + Utf8 [()I]
@@ -57374,18 +57392,20 @@ z=]
   + Utf8 [(Ljava/lang/String;)Ljava/lang/StringBuilder;]
   + Utf8 [(Ljava/lang/String;)Ljava/util/Scanner;]
   + Utf8 [(Ljava/lang/String;)V]
+  + Utf8 [(Ljava/lang/String;)Z]
   + Utf8 [(Ljava/util/Collection;)V]
   + Utf8 [(Ljava/util/List;)V]
   + Utf8 [(Ljava/util/List;Ljava/util/Comparator;)V]
   + Utf8 [,]
   + Utf8 [1.已知二次函数过三点(x1,y1)(x2,y2)(x3,y3)求二次函数解析式。]
   + Utf8 [2.已知二次函数顶点(x,y)，经过点(x0,y0)。]
-  + Utf8 [2014.01.12.11]
+  + Utf8 [2014.01.23.14]
   + Utf8 [3.已知二次函数过两点(x1,y1)(x2,y2)，对称轴x=z。]
   + Utf8 [4.输入一组数据，得出众数、中位数、平均数、方差、标准差、极差。]
   + Utf8 [5.求一个表达式的值（只能输入+-*/()和数字）。]
   + Utf8 [6.已知一次函数过(x1,y1),(x2,y2),求一次函数解析式]
   + Utf8 [7.输入一个二次函数解析式，输出二次函数的信息]
+  + Utf8 [8.测试能否上指定网址]
   + Utf8 [<clinit>]
   + Utf8 [<init>]
   + Utf8 [Code]
@@ -57402,6 +57422,7 @@ z=]
   + Utf8 [charAt]
   + Utf8 [charValue]
   + Utf8 [clone]
+  + Utf8 [close]
   + Utf8 [com/chenfuzi/a/a]
   + Utf8 [com/chenfuzi/a/b]
   + Utf8 [com/chenfuzi/a/c]
@@ -57419,9 +57440,8 @@ z=]
   + Utf8 [getValue]
   + Utf8 [h]
   + Utf8 [hasNext]
+  + Utf8 [i]
   + Utf8 [intValue]
-  + Utf8 [java/io/FileNotFoundException]
-  + Utf8 [java/io/IOException]
   + Utf8 [java/io/InputStream]
   + Utf8 [java/lang/Character]
   + Utf8 [java/lang/Double]
@@ -57432,7 +57452,7 @@ z=]
   + Utf8 [java/lang/Object]
   + Utf8 [java/lang/String]
   + Utf8 [java/lang/StringBuilder]
-  + Utf8 [java/net/MalformedURLException]
+  + Utf8 [java/lang/Throwable]
   + Utf8 [java/net/URL]
   + Utf8 [java/net/URLConnection]
   + Utf8 [java/util/ArrayList]
@@ -57464,165 +57484,223 @@ Fields (count = 3):
     Access flags: 0x9
       = public static com.chenfuzi.a.c c
 
-Methods (count = 13):
+Methods (count = 15):
   - Method:       <clinit>()V
     Access flags: 0x8
       = static void <clinit>()
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 56, locals = 0, stack = 4):
-      [0] bipush 8
-      [2] anewarray #61
+    + Code attribute instructions (code length = 62, locals = 0, stack = 4):
+      [0] bipush 9
+      [2] anewarray #63
         + Class [java/lang/String]
       [5] dup
       [6] iconst_0
-      [7] ldc #46
+      [7] ldc #50
         + String [请选择你想要的工具。]
       [9] aastore
       [10] dup
       [11] iconst_1
-      [12] ldc #37
+      [12] ldc #40
         + String [1.已知二次函数过三点(x1,y1)(x2,y2)(x3,y3)求二次函数解析式。]
       [14] aastore
       [15] dup
       [16] iconst_2
-      [17] ldc #38
+      [17] ldc #41
         + String [2.已知二次函数顶点(x,y)，经过点(x0,y0)。]
       [19] aastore
       [20] dup
       [21] iconst_3
-      [22] ldc #40
+      [22] ldc #43
         + String [3.已知二次函数过两点(x1,y1)(x2,y2)，对称轴x=z。]
       [24] aastore
       [25] dup
       [26] iconst_4
-      [27] ldc #41
+      [27] ldc #44
         + String [4.输入一组数据，得出众数、中位数、平均数、方差、标准差、极差。]
       [29] aastore
       [30] dup
       [31] iconst_5
-      [32] ldc #42
+      [32] ldc #45
         + String [5.求一个表达式的值（只能输入+-*/()和数字）。]
       [34] aastore
       [35] dup
       [36] bipush 6
-      [38] ldc #43
+      [38] ldc #46
         + String [6.已知一次函数过(x1,y1),(x2,y2),求一次函数解析式]
       [40] aastore
       [41] dup
       [42] bipush 7
-      [44] ldc #44
+      [44] ldc #47
         + String [7.输入一个二次函数解析式，输出二次函数的信息]
       [46] aastore
-      [47] putstatic #78
+      [47] dup
+      [48] bipush 8
+      [50] ldc #48
+        + String [8.测试能否上指定网址]
+      [52] aastore
+      [53] putstatic #80
         + Fieldref [com/chenfuzi/a/a.a [Ljava/lang/String;]
-      [50] ldc #39
-        + String [2014.01.12.11]
-      [52] putstatic #79
+      [56] ldc #42
+        + String [2014.01.23.14]
+      [58] putstatic #81
         + Fieldref [com/chenfuzi/a/a.b Ljava/lang/String;]
-      [55] return
+      [61] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
   + Method:       a(Ljava/lang/String;)Ljava/lang/String;
     Access flags: 0x9
       = public static java.lang.String a(java.lang.String)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 70, locals = 5, stack = 3):
+    + Code attribute instructions (code length = 156, locals = 9, stack = 3):
       [0] aconst_null
       [1] astore_1 v1
-      [2] new #64
+      [2] aconst_null
+      [3] astore_2 v2
+      [4] aconst_null
+      [5] astore_3 v3
+      [6] aconst_null
+      [7] astore v4
+      [9] ldc #1
+        + String []
+      [11] astore v5
+      [13] new #66
         + Class [java/net/URL]
-      [5] dup
-      [6] aload_0 v0
-      [7] invokespecial #110
+      [16] dup
+      [17] aload_0 v0
+      [18] invokespecial #115
         + Methodref [java/net/URL.<init> (Ljava/lang/String;)V]
-      [10] astore_1 v1
-      [11] goto +7 (target=18)
-      [14] astore_2 v2
-      [15] ldc #1
-        + String []
-      [17] areturn
-      [18] aload_1 v1
-      [19] invokevirtual #111
+      [21] astore_1 v1
+      [22] aload_1 v1
+      [23] invokevirtual #116
         + Methodref [java/net/URL.openConnection ()Ljava/net/URLConnection;]
-      [22] astore_2 v2
-      [23] aload_2 v2
-      [24] invokevirtual #112
+      [26] astore_2 v2
+      [27] aload_2 v2
+      [28] invokevirtual #117
         + Methodref [java/net/URLConnection.getInputStream ()Ljava/io/InputStream;]
-      [27] astore_3 v3
-      [28] new #71
+      [31] astore_3 v3
+      [32] new #73
         + Class [java/util/Scanner]
-      [31] dup
-      [32] aload_3 v3
-      [33] invokespecial #122
+      [35] dup
+      [36] aload_3 v3
+      [37] invokespecial #127
         + Methodref [java/util/Scanner.<init> (Ljava/io/InputStream;)V]
-      [36] ldc #45
+      [40] ldc #49
         + String [\A]
-      [38] invokevirtual #125
+      [42] invokevirtual #131
         + Methodref [java/util/Scanner.useDelimiter (Ljava/lang/String;)Ljava/util/Scanner;]
-      [41] astore v4
-      [43] aload v4
-      [45] invokevirtual #123
+      [45] astore v4
+      [47] aload v4
+      [49] invokevirtual #129
         + Methodref [java/util/Scanner.hasNext ()Z]
-      [48] ifeq +11 (target=59)
-      [51] aload v4
-      [53] invokevirtual #124
+      [52] ifeq +11 (target=63)
+      [55] aload v4
+      [57] invokevirtual #130
         + Methodref [java/util/Scanner.next ()Ljava/lang/String;]
-      [56] goto +5 (target=61)
-      [59] ldc #1
-        + String []
-      [61] areturn
-      [62] astore_2 v2
+      [60] goto +5 (target=65)
       [63] ldc #1
         + String []
-      [65] areturn
-      [66] astore_2 v2
-      [67] ldc #1
+      [65] astore v5
+      [67] goto +63 (target=130)
+      [70] astore v6
+      [72] ldc #1
         + String []
-      [69] areturn
-      Code attribute exceptions (count = 3):
-      - ExceptionInfo (2 -> 11: 14):
-      + Class [java/net/MalformedURLException]
-      - ExceptionInfo (18 -> 61: 62):
-      + Class [java/io/FileNotFoundException]
-      - ExceptionInfo (18 -> 61: 66):
-      + Class [java/io/IOException]
+      [74] astore v5
+      [76] aload v4
+      [78] ifnull +8 (target=86)
+      [81] aload v4
+      [83] invokevirtual #128
+        + Methodref [java/util/Scanner.close ()V]
+      [86] aload_3 v3
+      [87] ifnull +66 (target=153)
+      [90] aload_3 v3
+      [91] invokevirtual #97
+        + Methodref [java/io/InputStream.close ()V]
+      [94] goto +59 (target=153)
+      [97] astore v8
+      [99] goto +54 (target=153)
+      [102] astore v7
+      [104] aload v4
+      [106] ifnull +8 (target=114)
+      [109] aload v4
+      [111] invokevirtual #128
+        + Methodref [java/util/Scanner.close ()V]
+      [114] aload_3 v3
+      [115] ifnull +12 (target=127)
+      [118] aload_3 v3
+      [119] invokevirtual #97
+        + Methodref [java/io/InputStream.close ()V]
+      [122] goto +5 (target=127)
+      [125] astore v8
+      [127] aload v7
+      [129] athrow
+      [130] aload v4
+      [132] ifnull +8 (target=140)
+      [135] aload v4
+      [137] invokevirtual #128
+        + Methodref [java/util/Scanner.close ()V]
+      [140] aload_3 v3
+      [141] ifnull +12 (target=153)
+      [144] aload_3 v3
+      [145] invokevirtual #97
+        + Methodref [java/io/InputStream.close ()V]
+      [148] goto +5 (target=153)
+      [151] astore v8
+      [153] aload v5
+      [155] areturn
+      Code attribute exceptions (count = 5):
+      - ExceptionInfo (13 -> 67: 70):
+      + Class [java/lang/Exception]
+      - ExceptionInfo (76 -> 94: 97):
+      + Class [java/lang/Exception]
+      - ExceptionInfo (13 -> 76: 102):
+      - ExceptionInfo (104 -> 122: 125):
+      + Class [java/lang/Exception]
+      - ExceptionInfo (130 -> 148: 151):
+      + Class [java/lang/Exception]
       Code attribute attributes (attribute count = 1):
-      + Stack map table attribute (count = 6):
-        - [14] Var: [a:java/lang/String][a:java/net/URL], Stack: [a:java/net/MalformedURLException]
-        - [18] Var: ..., Stack: (empty)
-        - [59] Var: ...[a:java/net/URLConnection][a:java/io/InputStream][a:java/util/Scanner], Stack: (empty)
-        - [61] Var: ..., Stack: [a:java/lang/String]
-        - [62] Var: [a:java/lang/String][a:java/net/URL], Stack: [a:java/io/FileNotFoundException]
-        - [66] Var: ..., Stack: [a:java/io/IOException]
+      + Stack map table attribute (count = 13):
+        - [63] Var: [a:java/lang/String][a:java/net/URL][a:java/net/URLConnection][a:java/io/InputStream][a:java/util/Scanner][a:java/lang/String], Stack: 
+        - [65] Var: ..., Stack: [a:java/lang/String]
+        - [70] Var: ..., Stack: [a:java/lang/Exception]
+        - [86] Var: ..., Stack: (empty)
+        - [97] Var: ..., Stack: [a:java/lang/Exception]
+        - [102] Var: ..., Stack: [a:java/lang/Throwable]
+        - [114] Var: [a:java/lang/String][a:java/net/URL][a:java/net/URLConnection][a:java/io/InputStream][a:java/util/Scanner][a:java/lang/String][T][a:java/lang/Throwable], Stack: 
+        - [125] Var: ..., Stack: [a:java/lang/Exception]
+        - [127] Var: ..., Stack: (empty)
+        - [130] Var: [a:java/lang/String][a:java/net/URL][a:java/net/URLConnection][a:java/io/InputStream][a:java/util/Scanner][a:java/lang/String], Stack: 
+        - [140] Var: ..., Stack: (empty)
+        - [151] Var: ..., Stack: [a:java/lang/Exception]
+        - [153] Var: ..., Stack: (empty)
   + Method:       a()Ljava/lang/Double;
     Access flags: 0xa
       = private static java.lang.Double a()
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 48, locals = 3, stack = 2):
-      [0] getstatic #80
+      [0] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
-      [3] invokeinterface #126
+      [3] invokeinterface #132
         + InterfaceMethodref [com/chenfuzi/a/c.a ()V]
-      [8] getstatic #80
+      [8] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
-      [11] invokeinterface #129
+      [11] invokeinterface #135
         + InterfaceMethodref [com/chenfuzi/a/c.f ()Ljava/lang/String;]
       [16] astore_0 v0
       [17] aload_0 v0
-      [18] invokestatic #98
+      [18] invokestatic #103
         + Methodref [java/lang/Double.valueOf (Ljava/lang/String;)Ljava/lang/Double;]
       [21] astore_1 v1
       [22] goto +15 (target=37)
       [25] astore_2 v2
-      [26] getstatic #80
+      [26] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
-      [29] invokeinterface #130
+      [29] invokeinterface #136
         + InterfaceMethodref [com/chenfuzi/a/c.g ()V]
       [34] goto -26 (target=8)
-      [37] getstatic #80
+      [37] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
       [40] aload_0 v0
-      [41] invokeinterface #127
+      [41] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
       [46] aload_1 v1
       [47] areturn
@@ -57638,118 +57716,123 @@ Methods (count = 13):
     Access flags: 0x9
       = public static void a(int)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 87, locals = 1, stack = 1):
+    + Code attribute instructions (code length = 97, locals = 1, stack = 1):
       [0] iload_0 v0
-      [1] tableswitch (7 offsets, default=85) (target=86)
-        1: offset = 43, target = 44
-        2: offset = 49, target = 50
-        3: offset = 55, target = 56
-        4: offset = 61, target = 62
-        5: offset = 67, target = 68
-        6: offset = 73, target = 74
-        7: offset = 79, target = 80
-        default: offset = 85, target = 86
-      [44] invokestatic #84
+      [1] tableswitch (8 offsets, default=95) (target=96)
+        1: offset = 47, target = 48
+        2: offset = 53, target = 54
+        3: offset = 59, target = 60
+        4: offset = 65, target = 66
+        5: offset = 71, target = 72
+        6: offset = 77, target = 78
+        7: offset = 83, target = 84
+        8: offset = 89, target = 90
+        default: offset = 95, target = 96
+      [48] invokestatic #86
         + Methodref [com/chenfuzi/a/a.b ()V]
-      [47] goto +39 (target=86)
-      [50] invokestatic #85
+      [51] goto +45 (target=96)
+      [54] invokestatic #88
         + Methodref [com/chenfuzi/a/a.c ()V]
-      [53] goto +33 (target=86)
-      [56] invokestatic #86
+      [57] goto +39 (target=96)
+      [60] invokestatic #89
         + Methodref [com/chenfuzi/a/a.d ()V]
-      [59] goto +27 (target=86)
-      [62] invokestatic #87
+      [63] goto +33 (target=96)
+      [66] invokestatic #90
         + Methodref [com/chenfuzi/a/a.e ()V]
-      [65] goto +21 (target=86)
-      [68] invokestatic #88
+      [69] goto +27 (target=96)
+      [72] invokestatic #91
         + Methodref [com/chenfuzi/a/a.f ()V]
-      [71] goto +15 (target=86)
-      [74] invokestatic #89
+      [75] goto +21 (target=96)
+      [78] invokestatic #92
         + Methodref [com/chenfuzi/a/a.g ()V]
-      [77] goto +9 (target=86)
-      [80] invokestatic #90
+      [81] goto +15 (target=96)
+      [84] invokestatic #93
         + Methodref [com/chenfuzi/a/a.h ()V]
-      [83] goto +3 (target=86)
-      [86] return
+      [87] goto +9 (target=96)
+      [90] invokestatic #94
+        + Methodref [com/chenfuzi/a/a.i ()V]
+      [93] goto +3 (target=96)
+      [96] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 1):
-      + Stack map table attribute (count = 8):
-        - [44] Var: ..., Stack: (empty)
-        - [50] Var: ..., Stack: (empty)
-        - [56] Var: ..., Stack: (empty)
-        - [62] Var: ..., Stack: (empty)
-        - [68] Var: ..., Stack: (empty)
-        - [74] Var: ..., Stack: (empty)
-        - [80] Var: ..., Stack: (empty)
-        - [86] Var: ..., Stack: (empty)
+      + Stack map table attribute (count = 9):
+        - [48] Var: ..., Stack: (empty)
+        - [54] Var: ..., Stack: (empty)
+        - [60] Var: ..., Stack: (empty)
+        - [66] Var: ..., Stack: (empty)
+        - [72] Var: ..., Stack: (empty)
+        - [78] Var: ..., Stack: (empty)
+        - [84] Var: ..., Stack: (empty)
+        - [90] Var: ..., Stack: (empty)
+        - [96] Var: ..., Stack: (empty)
   + Method:       a(Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/Double;)V
     Access flags: 0xa
       = private static void a(java.lang.Double,java.lang.Double,java.lang.Double)
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 92, locals = 3, stack = 4):
-      [0] getstatic #80
+      [0] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
       [3] ldc #19
         + String [
 y=ax^2+bx+c]
-      [5] invokeinterface #127
+      [5] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
-      [10] getstatic #80
+      [10] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
-      [13] new #62
+      [13] new #64
         + Class [java/lang/StringBuilder]
       [16] dup
       [17] ldc #5
         + String [
 a=]
-      [19] invokespecial #107
+      [19] invokespecial #112
         + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
       [22] aload_0 v0
-      [23] invokestatic #106
+      [23] invokestatic #111
         + Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
-      [26] invokevirtual #108
+      [26] invokevirtual #113
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [29] invokevirtual #109
+      [29] invokevirtual #114
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [32] invokeinterface #127
+      [32] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
-      [37] getstatic #80
+      [37] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
-      [40] new #62
+      [40] new #64
         + Class [java/lang/StringBuilder]
       [43] dup
       [44] ldc #6
         + String [
 b=]
-      [46] invokespecial #107
+      [46] invokespecial #112
         + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
       [49] aload_1 v1
-      [50] invokestatic #106
+      [50] invokestatic #111
         + Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
-      [53] invokevirtual #108
+      [53] invokevirtual #113
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [56] invokevirtual #109
+      [56] invokevirtual #114
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [59] invokeinterface #127
+      [59] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
-      [64] getstatic #80
+      [64] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
-      [67] new #62
+      [67] new #64
         + Class [java/lang/StringBuilder]
       [70] dup
       [71] ldc #7
         + String [
 c=]
-      [73] invokespecial #107
+      [73] invokespecial #112
         + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
       [76] aload_2 v2
-      [77] invokestatic #106
+      [77] invokestatic #111
         + Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
-      [80] invokevirtual #108
+      [80] invokevirtual #113
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [83] invokevirtual #109
+      [83] invokevirtual #114
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [86] invokeinterface #127
+      [86] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
       [91] return
       Code attribute exceptions (count = 0):
@@ -57759,50 +57842,50 @@ c=]
       = private static void a(java.lang.Double,java.lang.Double)
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 65, locals = 2, stack = 4):
-      [0] getstatic #80
+      [0] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
       [3] ldc #20
         + String [
 y=kx+b]
-      [5] invokeinterface #127
+      [5] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
-      [10] getstatic #80
+      [10] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
-      [13] new #62
+      [13] new #64
         + Class [java/lang/StringBuilder]
       [16] dup
       [17] ldc #8
         + String [
 k=]
-      [19] invokespecial #107
+      [19] invokespecial #112
         + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
       [22] aload_0 v0
-      [23] invokestatic #106
+      [23] invokestatic #111
         + Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
-      [26] invokevirtual #108
+      [26] invokevirtual #113
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [29] invokevirtual #109
+      [29] invokevirtual #114
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [32] invokeinterface #127
+      [32] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
-      [37] getstatic #80
+      [37] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
-      [40] new #62
+      [40] new #64
         + Class [java/lang/StringBuilder]
       [43] dup
       [44] ldc #6
         + String [
 b=]
-      [46] invokespecial #107
+      [46] invokespecial #112
         + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
       [49] aload_1 v1
-      [50] invokestatic #106
+      [50] invokestatic #111
         + Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
-      [53] invokevirtual #108
+      [53] invokevirtual #113
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [56] invokevirtual #109
+      [56] invokevirtual #114
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [59] invokeinterface #127
+      [59] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
       [64] return
       Code attribute exceptions (count = 0):
@@ -57812,329 +57895,329 @@ b=]
       = private static void b()
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 434, locals = 9, stack = 10):
-      [0] getstatic #80
+      [0] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
       [3] ldc #10
         + String [
 x1=]
-      [5] invokeinterface #127
+      [5] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
-      [10] invokestatic #81
+      [10] invokestatic #83
         + Methodref [com/chenfuzi/a/a.a ()Ljava/lang/Double;]
       [13] astore_0 v0
-      [14] getstatic #80
+      [14] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
       [17] ldc #15
         + String [
 y1=]
-      [19] invokeinterface #127
+      [19] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
-      [24] invokestatic #81
+      [24] invokestatic #83
         + Methodref [com/chenfuzi/a/a.a ()Ljava/lang/Double;]
       [27] astore_3 v3
-      [28] getstatic #80
+      [28] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
       [31] ldc #11
         + String [
 x2=]
-      [33] invokeinterface #127
+      [33] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
-      [38] invokestatic #81
+      [38] invokestatic #83
         + Methodref [com/chenfuzi/a/a.a ()Ljava/lang/Double;]
       [41] astore_1 v1
-      [42] getstatic #80
+      [42] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
       [45] ldc #16
         + String [
 y2=]
-      [47] invokeinterface #127
+      [47] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
-      [52] invokestatic #81
+      [52] invokestatic #83
         + Methodref [com/chenfuzi/a/a.a ()Ljava/lang/Double;]
       [55] astore v4
-      [57] getstatic #80
+      [57] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
       [60] ldc #12
         + String [
 x3=]
-      [62] invokeinterface #127
+      [62] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
-      [67] invokestatic #81
+      [67] invokestatic #83
         + Methodref [com/chenfuzi/a/a.a ()Ljava/lang/Double;]
       [70] astore_2 v2
-      [71] getstatic #80
+      [71] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
       [74] ldc #17
         + String [
 y3=]
-      [76] invokeinterface #127
+      [76] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
-      [81] invokestatic #81
+      [81] invokestatic #83
         + Methodref [com/chenfuzi/a/a.a ()Ljava/lang/Double;]
       [84] astore v5
       [86] aload_3 v3
-      [87] invokevirtual #95
+      [87] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [90] aload_1 v1
-      [91] invokevirtual #95
+      [91] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [94] aload_2 v2
-      [95] invokevirtual #95
+      [95] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [98] dsub
       [99] dmul
       [100] aload v4
-      [102] invokevirtual #95
+      [102] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [105] aload_2 v2
-      [106] invokevirtual #95
+      [106] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [109] aload_0 v0
-      [110] invokevirtual #95
+      [110] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [113] dsub
       [114] dmul
       [115] dadd
       [116] aload v5
-      [118] invokevirtual #95
+      [118] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [121] aload_0 v0
-      [122] invokevirtual #95
+      [122] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [125] aload_1 v1
-      [126] invokevirtual #95
+      [126] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [129] dsub
       [130] dmul
       [131] dadd
       [132] dneg
       [133] aload_0 v0
-      [134] invokevirtual #95
+      [134] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [137] aload_1 v1
-      [138] invokevirtual #95
+      [138] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [141] dsub
       [142] ddiv
       [143] aload_1 v1
-      [144] invokevirtual #95
+      [144] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [147] aload_2 v2
-      [148] invokevirtual #95
+      [148] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [151] dsub
       [152] ddiv
       [153] aload_2 v2
-      [154] invokevirtual #95
+      [154] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [157] aload_0 v0
-      [158] invokevirtual #95
+      [158] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [161] dsub
       [162] ddiv
-      [163] invokestatic #97
+      [163] invokestatic #102
         + Methodref [java/lang/Double.valueOf (D)Ljava/lang/Double;]
       [166] astore v6
       [168] aload_3 v3
-      [169] invokevirtual #95
+      [169] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [172] aload_1 v1
-      [173] invokevirtual #95
+      [173] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [176] aload_1 v1
-      [177] invokevirtual #95
+      [177] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [180] dmul
       [181] aload_2 v2
-      [182] invokevirtual #95
+      [182] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [185] aload_2 v2
-      [186] invokevirtual #95
+      [186] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [189] dmul
       [190] dsub
       [191] dmul
       [192] aload v4
-      [194] invokevirtual #95
+      [194] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [197] aload_2 v2
-      [198] invokevirtual #95
+      [198] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [201] aload_2 v2
-      [202] invokevirtual #95
+      [202] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [205] dmul
       [206] aload_0 v0
-      [207] invokevirtual #95
+      [207] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [210] aload_0 v0
-      [211] invokevirtual #95
+      [211] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [214] dmul
       [215] dsub
       [216] dmul
       [217] dadd
       [218] aload v5
-      [220] invokevirtual #95
+      [220] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [223] aload_0 v0
-      [224] invokevirtual #95
+      [224] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [227] aload_0 v0
-      [228] invokevirtual #95
+      [228] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [231] dmul
       [232] aload_1 v1
-      [233] invokevirtual #95
+      [233] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [236] aload_1 v1
-      [237] invokevirtual #95
+      [237] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [240] dmul
       [241] dsub
       [242] dmul
       [243] dadd
       [244] aload_0 v0
-      [245] invokevirtual #95
+      [245] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [248] aload_1 v1
-      [249] invokevirtual #95
+      [249] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [252] dsub
       [253] ddiv
       [254] aload_1 v1
-      [255] invokevirtual #95
+      [255] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [258] aload_2 v2
-      [259] invokevirtual #95
+      [259] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [262] dsub
       [263] ddiv
       [264] aload_2 v2
-      [265] invokevirtual #95
+      [265] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [268] aload_0 v0
-      [269] invokevirtual #95
+      [269] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [272] dsub
       [273] ddiv
-      [274] invokestatic #97
+      [274] invokestatic #102
         + Methodref [java/lang/Double.valueOf (D)Ljava/lang/Double;]
       [277] astore v7
       [279] aload_3 v3
-      [280] invokevirtual #95
+      [280] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [283] aload_1 v1
-      [284] invokevirtual #95
+      [284] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [287] dmul
       [288] aload_2 v2
-      [289] invokevirtual #95
+      [289] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [292] dmul
       [293] aload_1 v1
-      [294] invokevirtual #95
+      [294] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [297] aload_2 v2
-      [298] invokevirtual #95
+      [298] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [301] dsub
       [302] dmul
       [303] aload v4
-      [305] invokevirtual #95
+      [305] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [308] aload_2 v2
-      [309] invokevirtual #95
+      [309] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [312] dmul
       [313] aload_0 v0
-      [314] invokevirtual #95
+      [314] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [317] dmul
       [318] aload_2 v2
-      [319] invokevirtual #95
+      [319] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [322] aload_0 v0
-      [323] invokevirtual #95
+      [323] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [326] dsub
       [327] dmul
       [328] dadd
       [329] aload v5
-      [331] invokevirtual #95
+      [331] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [334] aload_0 v0
-      [335] invokevirtual #95
+      [335] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [338] dmul
       [339] aload_1 v1
-      [340] invokevirtual #95
+      [340] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [343] dmul
       [344] aload_0 v0
-      [345] invokevirtual #95
+      [345] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [348] aload_1 v1
-      [349] invokevirtual #95
+      [349] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [352] dsub
       [353] dmul
       [354] dadd
       [355] aload_1 v1
-      [356] invokevirtual #95
+      [356] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [359] aload_2 v2
-      [360] invokevirtual #95
+      [360] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [363] dmul
       [364] aload_1 v1
-      [365] invokevirtual #95
+      [365] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [368] aload_2 v2
-      [369] invokevirtual #95
+      [369] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [372] dsub
       [373] dmul
       [374] aload_2 v2
-      [375] invokevirtual #95
+      [375] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [378] aload_0 v0
-      [379] invokevirtual #95
+      [379] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [382] dmul
       [383] aload_2 v2
-      [384] invokevirtual #95
+      [384] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [387] aload_0 v0
-      [388] invokevirtual #95
+      [388] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [391] dsub
       [392] dmul
       [393] dadd
       [394] aload_0 v0
-      [395] invokevirtual #95
+      [395] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [398] aload_1 v1
-      [399] invokevirtual #95
+      [399] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [402] dmul
       [403] aload_0 v0
-      [404] invokevirtual #95
+      [404] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [407] aload_1 v1
-      [408] invokevirtual #95
+      [408] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [411] dsub
       [412] dmul
       [413] dadd
       [414] ddiv
-      [415] invokestatic #97
+      [415] invokestatic #102
         + Methodref [java/lang/Double.valueOf (D)Ljava/lang/Double;]
       [418] astore v8
       [420] aload v6
       [422] aload v7
       [424] aload v8
-      [426] invokestatic #83
+      [426] invokestatic #85
         + Methodref [com/chenfuzi/a/a.a (Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/Double;)V]
       [429] goto +4 (target=433)
       [432] astore_0 v0
@@ -58151,111 +58234,111 @@ y3=]
       = private static void c()
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 153, locals = 7, stack = 6):
-      [0] getstatic #80
+      [0] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
       [3] ldc #13
         + String [
 x=]
-      [5] invokeinterface #127
+      [5] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
-      [10] invokestatic #81
+      [10] invokestatic #83
         + Methodref [com/chenfuzi/a/a.a ()Ljava/lang/Double;]
       [13] astore_0 v0
-      [14] getstatic #80
+      [14] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
       [17] ldc #18
         + String [
 y=]
-      [19] invokeinterface #127
+      [19] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
-      [24] invokestatic #81
+      [24] invokestatic #83
         + Methodref [com/chenfuzi/a/a.a ()Ljava/lang/Double;]
       [27] astore_1 v1
-      [28] getstatic #80
+      [28] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
       [31] ldc #9
         + String [
 x0=]
-      [33] invokeinterface #127
+      [33] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
-      [38] invokestatic #81
+      [38] invokestatic #83
         + Methodref [com/chenfuzi/a/a.a ()Ljava/lang/Double;]
       [41] astore_2 v2
-      [42] getstatic #80
+      [42] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
       [45] ldc #14
         + String [
 y0=]
-      [47] invokeinterface #127
+      [47] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
-      [52] invokestatic #81
+      [52] invokestatic #83
         + Methodref [com/chenfuzi/a/a.a ()Ljava/lang/Double;]
       [55] astore_3 v3
       [56] aload_3 v3
-      [57] invokevirtual #95
+      [57] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [60] aload_1 v1
-      [61] invokevirtual #95
+      [61] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [64] aload_1 v1
-      [65] invokevirtual #95
+      [65] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [68] dmul
       [69] dsub
       [70] aload_0 v0
-      [71] invokevirtual #95
+      [71] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [74] aload_2 v2
-      [75] invokevirtual #95
+      [75] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [78] dsub
       [79] ddiv
       [80] aload_0 v0
-      [81] invokevirtual #95
+      [81] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [84] aload_2 v2
-      [85] invokevirtual #95
+      [85] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [88] dsub
       [89] ddiv
-      [90] invokestatic #97
+      [90] invokestatic #102
         + Methodref [java/lang/Double.valueOf (D)Ljava/lang/Double;]
       [93] astore v4
-      [95] ldc2_w #72
+      [95] ldc2_w #74
         + Double [-2.0]
       [98] aload v4
-      [100] invokevirtual #95
+      [100] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [103] dmul
       [104] aload_0 v0
-      [105] invokevirtual #95
+      [105] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [108] dmul
-      [109] invokestatic #97
+      [109] invokestatic #102
         + Methodref [java/lang/Double.valueOf (D)Ljava/lang/Double;]
       [112] astore v5
       [114] aload v4
-      [116] invokevirtual #95
+      [116] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [119] aload_0 v0
-      [120] invokevirtual #95
+      [120] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [123] dmul
       [124] aload_0 v0
-      [125] invokevirtual #95
+      [125] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [128] dmul
       [129] aload_1 v1
-      [130] invokevirtual #95
+      [130] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [133] dadd
-      [134] invokestatic #97
+      [134] invokestatic #102
         + Methodref [java/lang/Double.valueOf (D)Ljava/lang/Double;]
       [137] astore v6
       [139] aload v4
       [141] aload v5
       [143] aload v6
-      [145] invokestatic #83
+      [145] invokestatic #85
         + Methodref [com/chenfuzi/a/a.a (Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/Double;)V]
       [148] goto +4 (target=152)
       [151] astore_0 v0
@@ -58272,176 +58355,176 @@ y0=]
       = private static void d()
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 239, locals = 8, stack = 10):
-      [0] getstatic #80
+      [0] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
       [3] ldc #10
         + String [
 x1=]
-      [5] invokeinterface #127
+      [5] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
-      [10] invokestatic #81
+      [10] invokestatic #83
         + Methodref [com/chenfuzi/a/a.a ()Ljava/lang/Double;]
       [13] astore_0 v0
-      [14] getstatic #80
+      [14] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
       [17] ldc #15
         + String [
 y1=]
-      [19] invokeinterface #127
+      [19] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
-      [24] invokestatic #81
+      [24] invokestatic #83
         + Methodref [com/chenfuzi/a/a.a ()Ljava/lang/Double;]
       [27] astore_1 v1
-      [28] getstatic #80
+      [28] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
       [31] ldc #11
         + String [
 x2=]
-      [33] invokeinterface #127
+      [33] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
-      [38] invokestatic #81
+      [38] invokestatic #83
         + Methodref [com/chenfuzi/a/a.a ()Ljava/lang/Double;]
       [41] astore_2 v2
-      [42] getstatic #80
+      [42] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
       [45] ldc #16
         + String [
 y2=]
-      [47] invokeinterface #127
+      [47] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
-      [52] invokestatic #81
+      [52] invokestatic #83
         + Methodref [com/chenfuzi/a/a.a ()Ljava/lang/Double;]
       [55] astore_3 v3
-      [56] getstatic #80
+      [56] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
       [59] ldc #21
         + String [
 z=]
-      [61] invokeinterface #127
+      [61] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
-      [66] invokestatic #81
+      [66] invokestatic #83
         + Methodref [com/chenfuzi/a/a.a ()Ljava/lang/Double;]
       [69] astore v4
       [71] aload_1 v1
-      [72] invokevirtual #95
+      [72] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [75] aload_3 v3
-      [76] invokevirtual #95
+      [76] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [79] dsub
       [80] aload_0 v0
-      [81] invokevirtual #95
+      [81] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [84] aload_2 v2
-      [85] invokevirtual #95
+      [85] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [88] dsub
       [89] ddiv
       [90] aload_0 v0
-      [91] invokevirtual #95
+      [91] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [94] aload_2 v2
-      [95] invokevirtual #95
+      [95] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [98] dadd
-      [99] ldc2_w #74
+      [99] ldc2_w #76
         + Double [2.0]
       [102] aload v4
-      [104] invokevirtual #95
+      [104] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [107] dmul
       [108] aload_0 v0
-      [109] invokevirtual #95
+      [109] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [112] aload_2 v2
-      [113] invokevirtual #95
+      [113] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [116] dsub
       [117] dmul
       [118] dsub
       [119] ddiv
-      [120] invokestatic #97
+      [120] invokestatic #102
         + Methodref [java/lang/Double.valueOf (D)Ljava/lang/Double;]
       [123] astore v5
-      [125] ldc2_w #72
+      [125] ldc2_w #74
         + Double [-2.0]
       [128] aload v4
-      [130] invokevirtual #95
+      [130] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [133] dmul
       [134] aload v5
-      [136] invokevirtual #95
+      [136] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [139] dmul
-      [140] invokestatic #97
+      [140] invokestatic #102
         + Methodref [java/lang/Double.valueOf (D)Ljava/lang/Double;]
       [143] astore v6
       [145] aload_1 v1
-      [146] invokevirtual #95
+      [146] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [149] aload_2 v2
-      [150] invokevirtual #95
+      [150] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [153] dmul
       [154] aload_2 v2
-      [155] invokevirtual #95
+      [155] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [158] dmul
       [159] aload_3 v3
-      [160] invokevirtual #95
+      [160] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [163] aload_0 v0
-      [164] invokevirtual #95
+      [164] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [167] dmul
       [168] aload_0 v0
-      [169] invokevirtual #95
+      [169] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [172] dmul
       [173] dsub
       [174] aload v6
-      [176] invokevirtual #95
+      [176] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [179] aload_0 v0
-      [180] invokevirtual #95
+      [180] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [183] dmul
       [184] aload_2 v2
-      [185] invokevirtual #95
+      [185] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [188] dmul
       [189] aload_2 v2
-      [190] invokevirtual #95
+      [190] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [193] aload_0 v0
-      [194] invokevirtual #95
+      [194] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [197] dsub
       [198] dmul
       [199] dsub
       [200] aload_2 v2
-      [201] invokevirtual #95
+      [201] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [204] aload_2 v2
-      [205] invokevirtual #95
+      [205] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [208] dmul
       [209] aload_0 v0
-      [210] invokevirtual #95
+      [210] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [213] aload_0 v0
-      [214] invokevirtual #95
+      [214] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [217] dmul
       [218] dsub
       [219] ddiv
-      [220] invokestatic #97
+      [220] invokestatic #102
         + Methodref [java/lang/Double.valueOf (D)Ljava/lang/Double;]
       [223] astore v7
       [225] aload v5
       [227] aload v6
       [229] aload v7
-      [231] invokestatic #83
+      [231] invokestatic #85
         + Methodref [com/chenfuzi/a/a.a (Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/Double;)V]
       [234] goto +4 (target=238)
       [237] astore_0 v0
@@ -58459,549 +58542,549 @@ z=]
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 971, locals = 13, stack = 10):
       [0] iconst_1
-      [1] invokestatic #100
+      [1] invokestatic #105
         + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
       [4] astore_0 v0
-      [5] getstatic #80
+      [5] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
       [8] ldc #34
         + String [
 请输入数据个数]
-      [10] invokeinterface #127
+      [10] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
-      [15] getstatic #80
+      [15] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
-      [18] invokeinterface #126
+      [18] invokeinterface #132
         + InterfaceMethodref [com/chenfuzi/a/c.a ()V]
-      [23] getstatic #80
+      [23] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
-      [26] invokeinterface #129
+      [26] invokeinterface #135
         + InterfaceMethodref [com/chenfuzi/a/c.f ()Ljava/lang/String;]
       [31] astore_2 v2
       [32] aload_2 v2
-      [33] invokestatic #101
+      [33] invokestatic #106
         + Methodref [java/lang/Integer.valueOf (Ljava/lang/String;)Ljava/lang/Integer;]
       [36] astore_0 v0
       [37] goto +15 (target=52)
       [40] astore_3 v3
-      [41] getstatic #80
+      [41] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
-      [44] invokeinterface #130
+      [44] invokeinterface #136
         + InterfaceMethodref [com/chenfuzi/a/c.g ()V]
       [49] goto -26 (target=23)
       [52] aload_0 v0
-      [53] invokevirtual #99
+      [53] invokevirtual #104
         + Methodref [java/lang/Integer.intValue ()I]
       [56] ifgt +14 (target=70)
-      [59] getstatic #80
+      [59] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
-      [62] invokeinterface #130
+      [62] invokeinterface #136
         + InterfaceMethodref [com/chenfuzi/a/c.g ()V]
       [67] goto +12 (target=79)
-      [70] getstatic #80
+      [70] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
       [73] aload_2 v2
-      [74] invokeinterface #127
+      [74] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
       [79] aload_0 v0
-      [80] invokevirtual #99
+      [80] invokevirtual #104
         + Methodref [java/lang/Integer.intValue ()I]
       [83] ifle -68 (target=15)
-      [86] new #66
+      [86] new #68
         + Class [java/util/ArrayList]
       [89] dup
       [90] aload_0 v0
-      [91] invokevirtual #99
+      [91] invokevirtual #104
         + Methodref [java/lang/Integer.intValue ()I]
-      [94] invokespecial #113
+      [94] invokespecial #118
         + Methodref [java/util/ArrayList.<init> (I)V]
       [97] astore_2 v2
       [98] dconst_0
-      [99] invokestatic #97
+      [99] invokestatic #102
         + Methodref [java/lang/Double.valueOf (D)Ljava/lang/Double;]
       [102] astore_3 v3
       [103] dconst_0
-      [104] invokestatic #97
+      [104] invokestatic #102
         + Methodref [java/lang/Double.valueOf (D)Ljava/lang/Double;]
       [107] astore v4
-      [109] getstatic #80
+      [109] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
       [112] ldc #33
         + String [
 请输入数据]
-      [114] invokeinterface #127
+      [114] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
       [119] iconst_0
-      [120] invokestatic #100
+      [120] invokestatic #105
         + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
       [123] astore_1 v1
       [124] goto +54 (target=178)
       [127] aload_2 v2
-      [128] invokestatic #81
+      [128] invokestatic #83
         + Methodref [com/chenfuzi/a/a.a ()Ljava/lang/Double;]
-      [131] invokevirtual #115
+      [131] invokevirtual #120
         + Methodref [java/util/ArrayList.add (Ljava/lang/Object;)Z]
       [134] pop
-      [135] getstatic #80
+      [135] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
-      [138] ldc #36
+      [138] ldc #39
         + String [,]
-      [140] invokeinterface #127
+      [140] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
       [145] aload_3 v3
-      [146] invokevirtual #95
+      [146] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [149] aload_2 v2
       [150] aload_1 v1
-      [151] invokevirtual #99
+      [151] invokevirtual #104
         + Methodref [java/lang/Integer.intValue ()I]
-      [154] invokevirtual #117
+      [154] invokevirtual #122
         + Methodref [java/util/ArrayList.get (I)Ljava/lang/Object;]
-      [157] checkcast #55
+      [157] checkcast #57
         + Class [java/lang/Double]
-      [160] invokevirtual #95
+      [160] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [163] dadd
-      [164] invokestatic #97
+      [164] invokestatic #102
         + Methodref [java/lang/Double.valueOf (D)Ljava/lang/Double;]
       [167] astore_3 v3
       [168] aload_1 v1
-      [169] invokevirtual #99
+      [169] invokevirtual #104
         + Methodref [java/lang/Integer.intValue ()I]
       [172] iconst_1
       [173] iadd
-      [174] invokestatic #100
+      [174] invokestatic #105
         + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
       [177] astore_1 v1
       [178] aload_1 v1
-      [179] invokevirtual #99
+      [179] invokevirtual #104
         + Methodref [java/lang/Integer.intValue ()I]
       [182] aload_0 v0
-      [183] invokevirtual #99
+      [183] invokevirtual #104
         + Methodref [java/lang/Integer.intValue ()I]
       [186] iconst_1
       [187] isub
       [188] ificmplt -61 (target=127)
       [191] aload_2 v2
-      [192] invokestatic #81
+      [192] invokestatic #83
         + Methodref [com/chenfuzi/a/a.a ()Ljava/lang/Double;]
-      [195] invokevirtual #115
+      [195] invokevirtual #120
         + Methodref [java/util/ArrayList.add (Ljava/lang/Object;)Z]
       [198] pop
       [199] aload_3 v3
-      [200] invokevirtual #95
+      [200] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [203] aload_2 v2
       [204] aload_1 v1
-      [205] invokevirtual #99
+      [205] invokevirtual #104
         + Methodref [java/lang/Integer.intValue ()I]
-      [208] invokevirtual #117
+      [208] invokevirtual #122
         + Methodref [java/util/ArrayList.get (I)Ljava/lang/Object;]
-      [211] checkcast #55
+      [211] checkcast #57
         + Class [java/lang/Double]
-      [214] invokevirtual #95
+      [214] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [217] dadd
-      [218] invokestatic #97
+      [218] invokestatic #102
         + Methodref [java/lang/Double.valueOf (D)Ljava/lang/Double;]
       [221] astore_3 v3
       [222] aload_2 v2
-      [223] invokevirtual #116
+      [223] invokevirtual #121
         + Methodref [java/util/ArrayList.clone ()Ljava/lang/Object;]
-      [226] checkcast #66
+      [226] checkcast #68
         + Class [java/util/ArrayList]
       [229] astore v5
-      [231] getstatic #80
+      [231] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
       [234] ldc #25
         + String [
 平均数：]
-      [236] invokeinterface #127
+      [236] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
-      [241] getstatic #80
+      [241] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
       [244] aload_3 v3
-      [245] invokevirtual #95
+      [245] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [248] aload_0 v0
-      [249] invokevirtual #99
+      [249] invokevirtual #104
         + Methodref [java/lang/Integer.intValue ()I]
       [252] i2d
       [253] ddiv
-      [254] invokestatic #105
+      [254] invokestatic #110
         + Methodref [java/lang/String.valueOf (D)Ljava/lang/String;]
-      [257] invokeinterface #127
+      [257] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
       [262] iconst_0
-      [263] invokestatic #100
+      [263] invokestatic #105
         + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
       [266] astore_1 v1
       [267] goto +75 (target=342)
       [270] aload v4
-      [272] invokevirtual #95
+      [272] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [275] aload_2 v2
       [276] aload_1 v1
-      [277] invokevirtual #99
+      [277] invokevirtual #104
         + Methodref [java/lang/Integer.intValue ()I]
-      [280] invokevirtual #117
+      [280] invokevirtual #122
         + Methodref [java/util/ArrayList.get (I)Ljava/lang/Object;]
-      [283] checkcast #55
+      [283] checkcast #57
         + Class [java/lang/Double]
-      [286] invokevirtual #95
+      [286] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [289] aload_3 v3
-      [290] invokevirtual #95
+      [290] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [293] aload_0 v0
-      [294] invokevirtual #99
+      [294] invokevirtual #104
         + Methodref [java/lang/Integer.intValue ()I]
       [297] i2d
       [298] ddiv
       [299] dsub
       [300] aload_2 v2
       [301] aload_1 v1
-      [302] invokevirtual #99
+      [302] invokevirtual #104
         + Methodref [java/lang/Integer.intValue ()I]
-      [305] invokevirtual #117
+      [305] invokevirtual #122
         + Methodref [java/util/ArrayList.get (I)Ljava/lang/Object;]
-      [308] checkcast #55
+      [308] checkcast #57
         + Class [java/lang/Double]
-      [311] invokevirtual #95
+      [311] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [314] aload_3 v3
-      [315] invokevirtual #95
+      [315] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [318] aload_0 v0
-      [319] invokevirtual #99
+      [319] invokevirtual #104
         + Methodref [java/lang/Integer.intValue ()I]
       [322] i2d
       [323] ddiv
       [324] dsub
       [325] dmul
       [326] dadd
-      [327] invokestatic #97
+      [327] invokestatic #102
         + Methodref [java/lang/Double.valueOf (D)Ljava/lang/Double;]
       [330] astore v4
       [332] aload_1 v1
-      [333] invokevirtual #99
+      [333] invokevirtual #104
         + Methodref [java/lang/Integer.intValue ()I]
       [336] iconst_1
       [337] iadd
-      [338] invokestatic #100
+      [338] invokestatic #105
         + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
       [341] astore_1 v1
       [342] aload_1 v1
-      [343] invokevirtual #99
+      [343] invokevirtual #104
         + Methodref [java/lang/Integer.intValue ()I]
       [346] aload_0 v0
-      [347] invokevirtual #99
+      [347] invokevirtual #104
         + Methodref [java/lang/Integer.intValue ()I]
       [350] ificmplt -80 (target=270)
-      [353] getstatic #80
+      [353] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
       [356] ldc #28
         + String [
 方差：]
-      [358] invokeinterface #127
+      [358] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
-      [363] getstatic #80
+      [363] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
       [366] aload v4
-      [368] invokevirtual #95
+      [368] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [371] aload_0 v0
-      [372] invokevirtual #99
+      [372] invokevirtual #104
         + Methodref [java/lang/Integer.intValue ()I]
       [375] i2d
       [376] ddiv
-      [377] invokestatic #105
+      [377] invokestatic #110
         + Methodref [java/lang/String.valueOf (D)Ljava/lang/String;]
-      [380] invokeinterface #127
+      [380] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
-      [385] getstatic #80
+      [385] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
       [388] ldc #31
         + String [
 标准差：]
-      [390] invokeinterface #127
+      [390] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
-      [395] getstatic #80
+      [395] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
       [398] aload v4
-      [400] invokevirtual #95
+      [400] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [403] aload_0 v0
-      [404] invokevirtual #99
+      [404] invokevirtual #104
         + Methodref [java/lang/Integer.intValue ()I]
       [407] i2d
       [408] ddiv
-      [409] invokestatic #97
+      [409] invokestatic #102
         + Methodref [java/lang/Double.valueOf (D)Ljava/lang/Double;]
-      [412] invokevirtual #95
+      [412] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
-      [415] invokestatic #102
+      [415] invokestatic #107
         + Methodref [java/lang/Math.sqrt (D)D]
-      [418] invokestatic #105
+      [418] invokestatic #110
         + Methodref [java/lang/String.valueOf (D)Ljava/lang/String;]
-      [421] invokeinterface #127
+      [421] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
       [426] aload v5
-      [428] invokestatic #119
+      [428] invokestatic #124
         + Methodref [java/util/Collections.sort (Ljava/util/List;)V]
-      [431] new #68
+      [431] new #70
         + Class [java/util/HashMap]
       [434] dup
-      [435] invokespecial #121
+      [435] invokespecial #126
         + Methodref [java/util/HashMap.<init> ()V]
       [438] astore v6
       [440] aload_0 v0
-      [441] invokevirtual #99
+      [441] invokevirtual #104
         + Methodref [java/lang/Integer.intValue ()I]
       [444] iconst_1
       [445] ificmpne +37 (target=482)
-      [448] getstatic #80
+      [448] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
-      [451] new #62
+      [451] new #64
         + Class [java/lang/StringBuilder]
       [454] dup
       [455] ldc #4
         + String [
 :众数：]
-      [457] invokespecial #107
+      [457] invokespecial #112
         + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
       [460] aload_2 v2
       [461] iconst_0
-      [462] invokevirtual #117
+      [462] invokevirtual #122
         + Methodref [java/util/ArrayList.get (I)Ljava/lang/Object;]
-      [465] invokestatic #106
+      [465] invokestatic #111
         + Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
-      [468] invokevirtual #108
+      [468] invokevirtual #113
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [471] invokevirtual #109
+      [471] invokevirtual #114
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [474] invokeinterface #127
+      [474] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
       [479] goto +338 (target=817)
       [482] aload v5
       [484] iconst_0
-      [485] invokevirtual #117
+      [485] invokevirtual #122
         + Methodref [java/util/ArrayList.get (I)Ljava/lang/Object;]
-      [488] checkcast #55
+      [488] checkcast #57
         + Class [java/lang/Double]
       [491] astore v7
       [493] iconst_1
-      [494] invokestatic #100
+      [494] invokestatic #105
         + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
       [497] astore v9
       [499] iconst_1
-      [500] invokestatic #100
+      [500] invokestatic #105
         + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
       [503] astore_1 v1
       [504] goto +74 (target=578)
       [507] aload v5
       [509] aload_1 v1
-      [510] invokevirtual #99
+      [510] invokevirtual #104
         + Methodref [java/lang/Integer.intValue ()I]
-      [513] invokevirtual #117
+      [513] invokevirtual #122
         + Methodref [java/util/ArrayList.get (I)Ljava/lang/Object;]
-      [516] checkcast #55
+      [516] checkcast #57
         + Class [java/lang/Double]
       [519] astore v8
       [521] aload v8
       [523] aload v7
-      [525] invokevirtual #96
+      [525] invokevirtual #101
         + Methodref [java/lang/Double.equals (Ljava/lang/Object;)Z]
       [528] ifeq +18 (target=546)
       [531] aload v9
-      [533] invokevirtual #99
+      [533] invokevirtual #104
         + Methodref [java/lang/Integer.intValue ()I]
       [536] iconst_1
       [537] iadd
-      [538] invokestatic #100
+      [538] invokestatic #105
         + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
       [541] astore v9
       [543] goto +25 (target=568)
       [546] aload v6
       [548] aload v7
       [550] aload v9
-      [552] invokeinterface #132
+      [552] invokeinterface #138
         + InterfaceMethodref [java/util/Map.put (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;]
       [557] pop
       [558] aload v8
       [560] astore v7
       [562] iconst_1
-      [563] invokestatic #100
+      [563] invokestatic #105
         + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
       [566] astore v9
       [568] aload_1 v1
-      [569] invokevirtual #99
+      [569] invokevirtual #104
         + Methodref [java/lang/Integer.intValue ()I]
       [572] iconst_1
       [573] iadd
-      [574] invokestatic #100
+      [574] invokestatic #105
         + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
       [577] astore_1 v1
       [578] aload_1 v1
-      [579] invokevirtual #99
+      [579] invokevirtual #104
         + Methodref [java/lang/Integer.intValue ()I]
       [582] aload v5
-      [584] invokevirtual #118
+      [584] invokevirtual #123
         + Methodref [java/util/ArrayList.size ()I]
       [587] ificmplt -80 (target=507)
       [590] aload v6
       [592] aload v7
       [594] aload v9
-      [596] invokeinterface #132
+      [596] invokeinterface #138
         + InterfaceMethodref [java/util/Map.put (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;]
       [601] pop
-      [602] new #66
+      [602] new #68
         + Class [java/util/ArrayList]
       [605] dup
       [606] aload v6
-      [608] invokeinterface #131
+      [608] invokeinterface #137
         + InterfaceMethodref [java/util/Map.entrySet ()Ljava/util/Set;]
-      [613] invokespecial #114
+      [613] invokespecial #119
         + Methodref [java/util/ArrayList.<init> (Ljava/util/Collection;)V]
       [616] astore v10
       [618] aload v10
-      [620] new #48
+      [620] new #52
         + Class [com/chenfuzi/a/b]
       [623] dup
-      [624] invokespecial #91
+      [624] invokespecial #95
         + Methodref [com/chenfuzi/a/b.<init> ()V]
-      [627] invokestatic #120
+      [627] invokestatic #125
         + Methodref [java/util/Collections.sort (Ljava/util/List;Ljava/util/Comparator;)V]
       [630] aload v10
       [632] iconst_0
-      [633] invokevirtual #117
+      [633] invokevirtual #122
         + Methodref [java/util/ArrayList.get (I)Ljava/lang/Object;]
-      [636] checkcast #70
+      [636] checkcast #72
         + Class [java/util/Map$Entry]
-      [639] invokeinterface #134
+      [639] invokeinterface #140
         + InterfaceMethodref [java/util/Map$Entry.getValue ()Ljava/lang/Object;]
-      [644] checkcast #57
+      [644] checkcast #59
         + Class [java/lang/Integer]
       [647] astore v11
       [649] iconst_1
-      [650] invokestatic #100
+      [650] invokestatic #105
         + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
       [653] astore_1 v1
       [654] goto +38 (target=692)
       [657] aload v10
       [659] aload_1 v1
-      [660] invokevirtual #99
+      [660] invokevirtual #104
         + Methodref [java/lang/Integer.intValue ()I]
-      [663] invokevirtual #117
+      [663] invokevirtual #122
         + Methodref [java/util/ArrayList.get (I)Ljava/lang/Object;]
-      [666] checkcast #70
+      [666] checkcast #72
         + Class [java/util/Map$Entry]
-      [669] invokeinterface #134
+      [669] invokeinterface #140
         + InterfaceMethodref [java/util/Map$Entry.getValue ()Ljava/lang/Object;]
       [674] aload v11
       [676] ifacmpeq +6 (target=682)
       [679] goto +25 (target=704)
       [682] aload_1 v1
-      [683] invokevirtual #99
+      [683] invokevirtual #104
         + Methodref [java/lang/Integer.intValue ()I]
       [686] iconst_1
       [687] iadd
-      [688] invokestatic #100
+      [688] invokestatic #105
         + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
       [691] astore_1 v1
       [692] aload_1 v1
-      [693] invokevirtual #99
+      [693] invokevirtual #104
         + Methodref [java/lang/Integer.intValue ()I]
       [696] aload v10
-      [698] invokevirtual #118
+      [698] invokevirtual #123
         + Methodref [java/util/ArrayList.size ()I]
       [701] ificmplt -44 (target=657)
-      [704] getstatic #80
+      [704] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
       [707] ldc #23
         + String [
 众数：]
-      [709] invokeinterface #127
+      [709] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
       [714] iconst_0
-      [715] invokestatic #100
+      [715] invokestatic #105
         + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
       [718] astore v12
       [720] goto +54 (target=774)
-      [723] getstatic #80
+      [723] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
       [726] aload v10
       [728] aload v12
-      [730] invokevirtual #99
+      [730] invokevirtual #104
         + Methodref [java/lang/Integer.intValue ()I]
-      [733] invokevirtual #117
+      [733] invokevirtual #122
         + Methodref [java/util/ArrayList.get (I)Ljava/lang/Object;]
-      [736] checkcast #70
+      [736] checkcast #72
         + Class [java/util/Map$Entry]
-      [739] invokeinterface #133
+      [739] invokeinterface #139
         + InterfaceMethodref [java/util/Map$Entry.getKey ()Ljava/lang/Object;]
-      [744] invokestatic #106
+      [744] invokestatic #111
         + Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
-      [747] invokeinterface #127
+      [747] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
-      [752] getstatic #80
+      [752] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
-      [755] ldc #36
+      [755] ldc #39
         + String [,]
-      [757] invokeinterface #127
+      [757] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
       [762] aload v12
-      [764] invokevirtual #99
+      [764] invokevirtual #104
         + Methodref [java/lang/Integer.intValue ()I]
       [767] iconst_1
       [768] iadd
-      [769] invokestatic #100
+      [769] invokestatic #105
         + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
       [772] astore v12
       [774] aload v12
-      [776] invokevirtual #99
+      [776] invokevirtual #104
         + Methodref [java/lang/Integer.intValue ()I]
       [779] aload_1 v1
-      [780] invokevirtual #99
+      [780] invokevirtual #104
         + Methodref [java/lang/Integer.intValue ()I]
       [783] iconst_1
       [784] isub
       [785] ificmplt -62 (target=723)
-      [788] getstatic #80
+      [788] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
       [791] aload v10
       [793] aload v12
-      [795] invokevirtual #99
+      [795] invokevirtual #104
         + Methodref [java/lang/Integer.intValue ()I]
-      [798] invokevirtual #117
+      [798] invokevirtual #122
         + Methodref [java/util/ArrayList.get (I)Ljava/lang/Object;]
-      [801] checkcast #70
+      [801] checkcast #72
         + Class [java/util/Map$Entry]
-      [804] invokeinterface #133
+      [804] invokeinterface #139
         + InterfaceMethodref [java/util/Map$Entry.getKey ()Ljava/lang/Object;]
-      [809] invokestatic #106
+      [809] invokestatic #111
         + Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
-      [812] invokeinterface #127
+      [812] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
-      [817] getstatic #80
+      [817] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
       [820] ldc #22
         + String [
 中位数：]
-      [822] invokeinterface #127
+      [822] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
       [827] aload_0 v0
-      [828] invokevirtual #99
+      [828] invokevirtual #104
         + Methodref [java/lang/Integer.intValue ()I]
       [831] iconst_2
       [832] irem
       [833] iconst_1
       [834] ificmpne +31 (target=865)
-      [837] getstatic #80
+      [837] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
       [840] aload_2 v2
       [841] aload_0 v0
-      [842] invokevirtual #99
+      [842] invokevirtual #104
         + Methodref [java/lang/Integer.intValue ()I]
       [845] iconst_1
       [846] iadd
@@ -59009,82 +59092,82 @@ z=]
       [848] idiv
       [849] iconst_1
       [850] isub
-      [851] invokevirtual #117
+      [851] invokevirtual #122
         + Methodref [java/util/ArrayList.get (I)Ljava/lang/Object;]
-      [854] invokestatic #106
+      [854] invokestatic #111
         + Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
-      [857] invokeinterface #127
+      [857] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
       [862] goto +53 (target=915)
-      [865] getstatic #80
+      [865] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
       [868] aload_2 v2
       [869] aload_0 v0
-      [870] invokevirtual #99
+      [870] invokevirtual #104
         + Methodref [java/lang/Integer.intValue ()I]
       [873] iconst_2
       [874] idiv
       [875] iconst_1
       [876] isub
-      [877] invokevirtual #117
+      [877] invokevirtual #122
         + Methodref [java/util/ArrayList.get (I)Ljava/lang/Object;]
-      [880] checkcast #55
+      [880] checkcast #57
         + Class [java/lang/Double]
-      [883] invokevirtual #95
+      [883] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [886] aload_2 v2
       [887] aload_0 v0
-      [888] invokevirtual #99
+      [888] invokevirtual #104
         + Methodref [java/lang/Integer.intValue ()I]
       [891] iconst_2
       [892] idiv
-      [893] invokevirtual #117
+      [893] invokevirtual #122
         + Methodref [java/util/ArrayList.get (I)Ljava/lang/Object;]
-      [896] checkcast #55
+      [896] checkcast #57
         + Class [java/lang/Double]
-      [899] invokevirtual #95
+      [899] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [902] dadd
-      [903] ldc2_w #74
+      [903] ldc2_w #76
         + Double [2.0]
       [906] ddiv
-      [907] invokestatic #105
+      [907] invokestatic #110
         + Methodref [java/lang/String.valueOf (D)Ljava/lang/String;]
-      [910] invokeinterface #127
+      [910] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
-      [915] getstatic #80
+      [915] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
       [918] ldc #30
         + String [
 极差：]
-      [920] invokeinterface #127
+      [920] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
-      [925] getstatic #80
+      [925] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
       [928] aload v5
       [930] aload_0 v0
-      [931] invokevirtual #99
+      [931] invokevirtual #104
         + Methodref [java/lang/Integer.intValue ()I]
       [934] iconst_1
       [935] isub
-      [936] invokevirtual #117
+      [936] invokevirtual #122
         + Methodref [java/util/ArrayList.get (I)Ljava/lang/Object;]
-      [939] checkcast #55
+      [939] checkcast #57
         + Class [java/lang/Double]
-      [942] invokevirtual #95
+      [942] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [945] aload v5
       [947] iconst_0
-      [948] invokevirtual #117
+      [948] invokevirtual #122
         + Methodref [java/util/ArrayList.get (I)Ljava/lang/Object;]
-      [951] checkcast #55
+      [951] checkcast #57
         + Class [java/lang/Double]
-      [954] invokevirtual #95
+      [954] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [957] dsub
-      [958] invokestatic #105
+      [958] invokestatic #110
         + Methodref [java/lang/String.valueOf (D)Ljava/lang/String;]
-      [961] invokeinterface #127
+      [961] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
       [966] goto +4 (target=970)
       [969] astore_0 v0
@@ -59126,243 +59209,253 @@ z=]
     Access flags: 0xa
       = private static void f()
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 215, locals = 3, stack = 4):
-      [0] getstatic #80
+    + Code attribute instructions (code length = 233, locals = 3, stack = 4):
+      [0] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
-      [3] ldc #35
+      [3] ldc #36
         + String [
 输入表达式：]
-      [5] invokeinterface #127
+      [5] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
-      [10] getstatic #80
+      [10] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
-      [13] invokeinterface #128
+      [13] invokeinterface #134
         + InterfaceMethodref [com/chenfuzi/a/c.b ()V]
-      [18] getstatic #80
+      [18] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
-      [21] invokeinterface #129
+      [21] invokeinterface #135
         + InterfaceMethodref [com/chenfuzi/a/c.f ()Ljava/lang/String;]
       [26] astore_0 v0
-      [27] iconst_0
-      [28] invokestatic #100
-        + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
-      [31] astore_2 v2
-      [32] goto +117 (target=149)
-      [35] aload_0 v0
-      [36] aload_2 v2
-      [37] invokevirtual #99
-        + Methodref [java/lang/Integer.intValue ()I]
-      [40] invokevirtual #103
-        + Methodref [java/lang/String.charAt (I)C]
-      [43] invokestatic #94
-        + Methodref [java/lang/Character.valueOf (C)Ljava/lang/Character;]
-      [46] astore_1 v1
-      [47] aload_1 v1
-      [48] invokevirtual #93
-        + Methodref [java/lang/Character.charValue ()C]
-      [51] bipush 48
-      [53] ificmplt +12 (target=65)
-      [56] aload_1 v1
-      [57] invokevirtual #93
-        + Methodref [java/lang/Character.charValue ()C]
-      [60] bipush 57
-      [62] ificmple +77 (target=139)
-      [65] aload_1 v1
-      [66] invokevirtual #93
-        + Methodref [java/lang/Character.charValue ()C]
-      [69] bipush 32
-      [71] ificmpeq +68 (target=139)
-      [74] aload_1 v1
-      [75] invokevirtual #93
-        + Methodref [java/lang/Character.charValue ()C]
-      [78] bipush 43
-      [80] ificmpeq +59 (target=139)
-      [83] aload_1 v1
-      [84] invokevirtual #93
-        + Methodref [java/lang/Character.charValue ()C]
-      [87] bipush 45
-      [89] ificmpeq +50 (target=139)
-      [92] aload_1 v1
-      [93] invokevirtual #93
-        + Methodref [java/lang/Character.charValue ()C]
-      [96] bipush 42
-      [98] ificmpeq +41 (target=139)
-      [101] aload_1 v1
-      [102] invokevirtual #93
-        + Methodref [java/lang/Character.charValue ()C]
-      [105] bipush 47
-      [107] ificmpeq +32 (target=139)
-      [110] aload_1 v1
-      [111] invokevirtual #93
-        + Methodref [java/lang/Character.charValue ()C]
-      [114] bipush 40
-      [116] ificmpeq +23 (target=139)
-      [119] aload_1 v1
-      [120] invokevirtual #93
-        + Methodref [java/lang/Character.charValue ()C]
-      [123] bipush 41
-      [125] ificmpeq +14 (target=139)
-      [128] getstatic #80
+      [27] aload_0 v0
+      [28] invokevirtual #109
+        + Methodref [java/lang/String.length ()I]
+      [31] ifne +14 (target=45)
+      [34] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
-      [131] invokeinterface #130
+      [37] invokeinterface #136
         + InterfaceMethodref [com/chenfuzi/a/c.g ()V]
-      [136] goto +24 (target=160)
-      [139] aload_2 v2
-      [140] invokevirtual #99
-        + Methodref [java/lang/Integer.intValue ()I]
-      [143] iconst_1
-      [144] iadd
-      [145] invokestatic #100
+      [42] goto -24 (target=18)
+      [45] iconst_0
+      [46] invokestatic #105
         + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
-      [148] astore_2 v2
-      [149] aload_2 v2
-      [150] invokevirtual #99
+      [49] astore_2 v2
+      [50] goto +117 (target=167)
+      [53] aload_0 v0
+      [54] aload_2 v2
+      [55] invokevirtual #104
         + Methodref [java/lang/Integer.intValue ()I]
-      [153] aload_0 v0
-      [154] invokevirtual #104
-        + Methodref [java/lang/String.length ()I]
-      [157] ificmplt -122 (target=35)
-      [160] aload_2 v2
-      [161] invokevirtual #99
-        + Methodref [java/lang/Integer.intValue ()I]
-      [164] aload_0 v0
-      [165] invokevirtual #104
-        + Methodref [java/lang/String.length ()I]
-      [168] ificmpne -150 (target=18)
-      [171] getstatic #80
+      [58] invokevirtual #108
+        + Methodref [java/lang/String.charAt (I)C]
+      [61] invokestatic #99
+        + Methodref [java/lang/Character.valueOf (C)Ljava/lang/Character;]
+      [64] astore_1 v1
+      [65] aload_1 v1
+      [66] invokevirtual #98
+        + Methodref [java/lang/Character.charValue ()C]
+      [69] bipush 48
+      [71] ificmplt +12 (target=83)
+      [74] aload_1 v1
+      [75] invokevirtual #98
+        + Methodref [java/lang/Character.charValue ()C]
+      [78] bipush 57
+      [80] ificmple +77 (target=157)
+      [83] aload_1 v1
+      [84] invokevirtual #98
+        + Methodref [java/lang/Character.charValue ()C]
+      [87] bipush 32
+      [89] ificmpeq +68 (target=157)
+      [92] aload_1 v1
+      [93] invokevirtual #98
+        + Methodref [java/lang/Character.charValue ()C]
+      [96] bipush 43
+      [98] ificmpeq +59 (target=157)
+      [101] aload_1 v1
+      [102] invokevirtual #98
+        + Methodref [java/lang/Character.charValue ()C]
+      [105] bipush 45
+      [107] ificmpeq +50 (target=157)
+      [110] aload_1 v1
+      [111] invokevirtual #98
+        + Methodref [java/lang/Character.charValue ()C]
+      [114] bipush 42
+      [116] ificmpeq +41 (target=157)
+      [119] aload_1 v1
+      [120] invokevirtual #98
+        + Methodref [java/lang/Character.charValue ()C]
+      [123] bipush 47
+      [125] ificmpeq +32 (target=157)
+      [128] aload_1 v1
+      [129] invokevirtual #98
+        + Methodref [java/lang/Character.charValue ()C]
+      [132] bipush 40
+      [134] ificmpeq +23 (target=157)
+      [137] aload_1 v1
+      [138] invokevirtual #98
+        + Methodref [java/lang/Character.charValue ()C]
+      [141] bipush 41
+      [143] ificmpeq +14 (target=157)
+      [146] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
-      [174] aload_0 v0
-      [175] invokeinterface #127
+      [149] invokeinterface #136
+        + InterfaceMethodref [com/chenfuzi/a/c.g ()V]
+      [154] goto +24 (target=178)
+      [157] aload_2 v2
+      [158] invokevirtual #104
+        + Methodref [java/lang/Integer.intValue ()I]
+      [161] iconst_1
+      [162] iadd
+      [163] invokestatic #105
+        + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
+      [166] astore_2 v2
+      [167] aload_2 v2
+      [168] invokevirtual #104
+        + Methodref [java/lang/Integer.intValue ()I]
+      [171] aload_0 v0
+      [172] invokevirtual #109
+        + Methodref [java/lang/String.length ()I]
+      [175] ificmplt -122 (target=53)
+      [178] aload_2 v2
+      [179] invokevirtual #104
+        + Methodref [java/lang/Integer.intValue ()I]
+      [182] aload_0 v0
+      [183] invokevirtual #109
+        + Methodref [java/lang/String.length ()I]
+      [186] ificmpne -168 (target=18)
+      [189] getstatic #82
+        + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
+      [192] aload_0 v0
+      [193] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
-      [180] getstatic #80
+      [198] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
-      [183] new #62
+      [201] new #64
         + Class [java/lang/StringBuilder]
-      [186] dup
-      [187] ldc #32
+      [204] dup
+      [205] ldc #32
         + String [
 结果为：]
-      [189] invokespecial #107
+      [207] invokespecial #112
         + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
-      [192] aload_0 v0
-      [193] invokestatic #92
+      [210] aload_0 v0
+      [211] invokestatic #96
         + Methodref [com/chenfuzi/a/d.a (Ljava/lang/String;)D]
-      [196] invokestatic #105
+      [214] invokestatic #110
         + Methodref [java/lang/String.valueOf (D)Ljava/lang/String;]
-      [199] invokevirtual #108
+      [217] invokevirtual #113
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [202] invokevirtual #109
+      [220] invokevirtual #114
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [205] invokeinterface #127
+      [223] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
-      [210] goto +4 (target=214)
-      [213] astore_1 v1
-      [214] return
+      [228] goto +4 (target=232)
+      [231] astore_1 v1
+      [232] return
       Code attribute exceptions (count = 1):
-      - ExceptionInfo (18 -> 210: 213):
+      - ExceptionInfo (18 -> 228: 231):
       + Class [java/lang/InterruptedException]
       Code attribute attributes (attribute count = 1):
-      + Stack map table attribute (count = 8):
+      + Stack map table attribute (count = 9):
         - [18] Var: ..., Stack: (empty)
-        - [35] Var: [a:java/lang/String][T][a:java/lang/Integer], Stack: 
-        - [65] Var: [a:java/lang/String][a:java/lang/Character][a:java/lang/Integer], Stack: 
-        - [139] Var: ..., Stack: (empty)
-        - [149] Var: [a:java/lang/String][T][a:java/lang/Integer], Stack: 
-        - [160] Var: ..., Stack: (empty)
-        - [213] Var: , Stack: [a:java/lang/InterruptedException]
-        - [214] Var: ..., Stack: (empty)
+        - [45] Var: ...[a:java/lang/String], Stack: (empty)
+        - [53] Var: [a:java/lang/String][T][a:java/lang/Integer], Stack: 
+        - [83] Var: [a:java/lang/String][a:java/lang/Character][a:java/lang/Integer], Stack: 
+        - [157] Var: ..., Stack: (empty)
+        - [167] Var: [a:java/lang/String][T][a:java/lang/Integer], Stack: 
+        - [178] Var: ..., Stack: (empty)
+        - [231] Var: , Stack: [a:java/lang/InterruptedException]
+        - [232] Var: ..., Stack: (empty)
   + Method:       g()V
     Access flags: 0xa
       = private static void g()
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 126, locals = 6, stack = 6):
-      [0] getstatic #80
+      [0] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
       [3] ldc #10
         + String [
 x1=]
-      [5] invokeinterface #127
+      [5] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
-      [10] invokestatic #81
+      [10] invokestatic #83
         + Methodref [com/chenfuzi/a/a.a ()Ljava/lang/Double;]
       [13] astore_0 v0
-      [14] getstatic #80
+      [14] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
       [17] ldc #15
         + String [
 y1=]
-      [19] invokeinterface #127
+      [19] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
-      [24] invokestatic #81
+      [24] invokestatic #83
         + Methodref [com/chenfuzi/a/a.a ()Ljava/lang/Double;]
       [27] astore_2 v2
-      [28] getstatic #80
+      [28] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
       [31] ldc #11
         + String [
 x2=]
-      [33] invokeinterface #127
+      [33] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
-      [38] invokestatic #81
+      [38] invokestatic #83
         + Methodref [com/chenfuzi/a/a.a ()Ljava/lang/Double;]
       [41] astore_1 v1
-      [42] getstatic #80
+      [42] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
       [45] ldc #16
         + String [
 y2=]
-      [47] invokeinterface #127
+      [47] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
-      [52] invokestatic #81
+      [52] invokestatic #83
         + Methodref [com/chenfuzi/a/a.a ()Ljava/lang/Double;]
       [55] astore_3 v3
       [56] aload_3 v3
-      [57] invokevirtual #95
+      [57] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [60] aload_2 v2
-      [61] invokevirtual #95
+      [61] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [64] dsub
       [65] aload_1 v1
-      [66] invokevirtual #95
+      [66] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [69] aload_0 v0
-      [70] invokevirtual #95
+      [70] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [73] dsub
       [74] ddiv
-      [75] invokestatic #97
+      [75] invokestatic #102
         + Methodref [java/lang/Double.valueOf (D)Ljava/lang/Double;]
       [78] astore v4
       [80] aload_0 v0
-      [81] invokevirtual #95
+      [81] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [84] aload_3 v3
-      [85] invokevirtual #95
+      [85] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [88] dmul
       [89] aload_1 v1
-      [90] invokevirtual #95
+      [90] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [93] aload_2 v2
-      [94] invokevirtual #95
+      [94] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [97] dmul
       [98] dsub
       [99] aload_0 v0
-      [100] invokevirtual #95
+      [100] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [103] aload_1 v1
-      [104] invokevirtual #95
+      [104] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [107] dsub
       [108] ddiv
-      [109] invokestatic #97
+      [109] invokestatic #102
         + Methodref [java/lang/Double.valueOf (D)Ljava/lang/Double;]
       [112] astore v5
       [114] aload v4
       [116] aload v5
-      [118] invokestatic #82
+      [118] invokestatic #84
         + Methodref [com/chenfuzi/a/a.a (Ljava/lang/Double;Ljava/lang/Double;)V]
       [121] goto +4 (target=125)
       [124] astore_0 v0
@@ -59379,174 +59472,174 @@ y2=]
       = private static void h()
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 239, locals = 3, stack = 6):
-      [0] getstatic #80
+      [0] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
       [3] ldc #5
         + String [
 a=]
-      [5] invokeinterface #127
+      [5] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
-      [10] invokestatic #81
+      [10] invokestatic #83
         + Methodref [com/chenfuzi/a/a.a ()Ljava/lang/Double;]
       [13] astore_0 v0
-      [14] getstatic #80
+      [14] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
       [17] ldc #6
         + String [
 b=]
-      [19] invokeinterface #127
+      [19] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
-      [24] invokestatic #81
+      [24] invokestatic #83
         + Methodref [com/chenfuzi/a/a.a ()Ljava/lang/Double;]
       [27] astore_1 v1
-      [28] getstatic #80
+      [28] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
       [31] ldc #7
         + String [
 c=]
-      [33] invokeinterface #127
+      [33] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
-      [38] invokestatic #81
+      [38] invokestatic #83
         + Methodref [com/chenfuzi/a/a.a ()Ljava/lang/Double;]
       [41] astore_2 v2
       [42] aload_0 v0
-      [43] invokevirtual #95
+      [43] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [46] dconst_0
       [47] dcmpl
       [48] ifle +13 (target=61)
-      [51] getstatic #80
+      [51] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
       [54] ldc #26
         + String [
 开口向上]
-      [56] invokeinterface #127
+      [56] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
       [61] aload_0 v0
-      [62] invokevirtual #95
+      [62] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [65] dconst_0
       [66] dcmpg
       [67] ifge +13 (target=80)
-      [70] getstatic #80
+      [70] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
       [73] ldc #27
         + String [
 开口向下]
-      [75] invokeinterface #127
+      [75] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
       [80] aload_1 v1
-      [81] invokevirtual #95
+      [81] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [84] aload_1 v1
-      [85] invokevirtual #95
+      [85] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [88] dmul
-      [89] ldc2_w #76
+      [89] ldc2_w #78
         + Double [4.0]
       [92] aload_0 v0
-      [93] invokevirtual #95
+      [93] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [96] dmul
       [97] aload_2 v2
-      [98] invokevirtual #95
+      [98] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [101] dmul
       [102] dsub
       [103] dconst_0
       [104] dcmpl
       [105] ifle +13 (target=118)
-      [108] getstatic #80
+      [108] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
       [111] ldc #2
         + String [
 2个不相同的实数根]
-      [113] invokeinterface #127
+      [113] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
       [118] aload_1 v1
-      [119] invokevirtual #95
+      [119] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [122] aload_1 v1
-      [123] invokevirtual #95
+      [123] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [126] dmul
-      [127] ldc2_w #76
+      [127] ldc2_w #78
         + Double [4.0]
       [130] aload_0 v0
-      [131] invokevirtual #95
+      [131] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [134] dmul
       [135] aload_2 v2
-      [136] invokevirtual #95
+      [136] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [139] dmul
       [140] dsub
       [141] dconst_0
       [142] dcmpg
       [143] ifge +13 (target=156)
-      [146] getstatic #80
+      [146] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
       [149] ldc #29
         + String [
 无实数根]
-      [151] invokeinterface #127
+      [151] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
       [156] aload_1 v1
-      [157] invokevirtual #95
+      [157] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [160] aload_1 v1
-      [161] invokevirtual #95
+      [161] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [164] dmul
-      [165] ldc2_w #76
+      [165] ldc2_w #78
         + Double [4.0]
       [168] aload_0 v0
-      [169] invokevirtual #95
+      [169] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [172] dmul
       [173] aload_2 v2
-      [174] invokevirtual #95
+      [174] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [177] dmul
       [178] dsub
       [179] dconst_0
       [180] dcmpl
       [181] ifne +13 (target=194)
-      [184] getstatic #80
+      [184] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
       [187] ldc #3
         + String [
 2个相同的实数根]
-      [189] invokeinterface #127
+      [189] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
-      [194] getstatic #80
+      [194] getstatic #82
         + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
-      [197] new #62
+      [197] new #64
         + Class [java/lang/StringBuilder]
       [200] dup
       [201] ldc #24
         + String [
 对称轴：y=]
-      [203] invokespecial #107
+      [203] invokespecial #112
         + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
       [206] aload_1 v1
-      [207] invokevirtual #95
+      [207] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [210] dneg
-      [211] ldc2_w #74
+      [211] ldc2_w #76
         + Double [2.0]
       [214] ddiv
       [215] aload_0 v0
-      [216] invokevirtual #95
+      [216] invokevirtual #100
         + Methodref [java/lang/Double.doubleValue ()D]
       [219] ddiv
-      [220] invokestatic #105
+      [220] invokestatic #110
         + Methodref [java/lang/String.valueOf (D)Ljava/lang/String;]
-      [223] invokevirtual #108
+      [223] invokevirtual #113
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [226] invokevirtual #109
+      [226] invokevirtual #114
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [229] invokeinterface #127
+      [229] invokeinterface #133
         + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
       [234] goto +4 (target=238)
       [237] astore_0 v0
@@ -59563,6 +59656,202 @@ c=]
         - [194] Var: ..., Stack: (empty)
         - [237] Var: , Stack: [a:java/lang/InterruptedException]
         - [238] Var: ..., Stack: (empty)
+  + Method:       b(Ljava/lang/String;)Z
+    Access flags: 0x9
+      = public static boolean b(java.lang.String)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 164, locals = 9, stack = 3):
+      [0] aconst_null
+      [1] astore_1 v1
+      [2] aconst_null
+      [3] astore_2 v2
+      [4] aconst_null
+      [5] astore_3 v3
+      [6] aconst_null
+      [7] astore v4
+      [9] iconst_0
+      [10] istore v5
+      [12] new #66
+        + Class [java/net/URL]
+      [15] dup
+      [16] aload_0 v0
+      [17] invokespecial #115
+        + Methodref [java/net/URL.<init> (Ljava/lang/String;)V]
+      [20] astore_1 v1
+      [21] aload_1 v1
+      [22] invokevirtual #116
+        + Methodref [java/net/URL.openConnection ()Ljava/net/URLConnection;]
+      [25] astore_2 v2
+      [26] aload_2 v2
+      [27] invokevirtual #117
+        + Methodref [java/net/URLConnection.getInputStream ()Ljava/io/InputStream;]
+      [30] astore_3 v3
+      [31] new #73
+        + Class [java/util/Scanner]
+      [34] dup
+      [35] aload_3 v3
+      [36] invokespecial #127
+        + Methodref [java/util/Scanner.<init> (Ljava/io/InputStream;)V]
+      [39] ldc #49
+        + String [\A]
+      [41] invokevirtual #131
+        + Methodref [java/util/Scanner.useDelimiter (Ljava/lang/String;)Ljava/util/Scanner;]
+      [44] astore v4
+      [46] aload v4
+      [48] invokevirtual #129
+        + Methodref [java/util/Scanner.hasNext ()Z]
+      [51] ifeq +22 (target=73)
+      [54] aload v4
+      [56] invokevirtual #130
+        + Methodref [java/util/Scanner.next ()Ljava/lang/String;]
+      [59] invokevirtual #109
+        + Methodref [java/lang/String.length ()I]
+      [62] ifeq +7 (target=69)
+      [65] iconst_1
+      [66] goto +8 (target=74)
+      [69] iconst_0
+      [70] goto +4 (target=74)
+      [73] iconst_0
+      [74] istore v5
+      [76] goto +62 (target=138)
+      [79] astore v6
+      [81] iconst_0
+      [82] istore v5
+      [84] aload v4
+      [86] ifnull +8 (target=94)
+      [89] aload v4
+      [91] invokevirtual #128
+        + Methodref [java/util/Scanner.close ()V]
+      [94] aload_3 v3
+      [95] ifnull +66 (target=161)
+      [98] aload_3 v3
+      [99] invokevirtual #97
+        + Methodref [java/io/InputStream.close ()V]
+      [102] goto +59 (target=161)
+      [105] astore v8
+      [107] goto +54 (target=161)
+      [110] astore v7
+      [112] aload v4
+      [114] ifnull +8 (target=122)
+      [117] aload v4
+      [119] invokevirtual #128
+        + Methodref [java/util/Scanner.close ()V]
+      [122] aload_3 v3
+      [123] ifnull +12 (target=135)
+      [126] aload_3 v3
+      [127] invokevirtual #97
+        + Methodref [java/io/InputStream.close ()V]
+      [130] goto +5 (target=135)
+      [133] astore v8
+      [135] aload v7
+      [137] athrow
+      [138] aload v4
+      [140] ifnull +8 (target=148)
+      [143] aload v4
+      [145] invokevirtual #128
+        + Methodref [java/util/Scanner.close ()V]
+      [148] aload_3 v3
+      [149] ifnull +12 (target=161)
+      [152] aload_3 v3
+      [153] invokevirtual #97
+        + Methodref [java/io/InputStream.close ()V]
+      [156] goto +5 (target=161)
+      [159] astore v8
+      [161] iload v5
+      [163] ireturn
+      Code attribute exceptions (count = 5):
+      - ExceptionInfo (12 -> 76: 79):
+      + Class [java/lang/Exception]
+      - ExceptionInfo (84 -> 102: 105):
+      + Class [java/lang/Exception]
+      - ExceptionInfo (12 -> 84: 110):
+      - ExceptionInfo (112 -> 130: 133):
+      + Class [java/lang/Exception]
+      - ExceptionInfo (138 -> 156: 159):
+      + Class [java/lang/Exception]
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 14):
+        - [69] Var: [a:java/lang/String][a:java/net/URL][a:java/net/URLConnection][a:java/io/InputStream][a:java/util/Scanner][i], Stack: 
+        - [73] Var: ..., Stack: (empty)
+        - [74] Var: ..., Stack: [i]
+        - [79] Var: ..., Stack: [a:java/lang/Exception]
+        - [94] Var: ..., Stack: (empty)
+        - [105] Var: ..., Stack: [a:java/lang/Exception]
+        - [110] Var: ..., Stack: [a:java/lang/Throwable]
+        - [122] Var: [a:java/lang/String][a:java/net/URL][a:java/net/URLConnection][a:java/io/InputStream][a:java/util/Scanner][i][T][a:java/lang/Throwable], Stack: 
+        - [133] Var: ..., Stack: [a:java/lang/Exception]
+        - [135] Var: ..., Stack: (empty)
+        - [138] Var: [a:java/lang/String][a:java/net/URL][a:java/net/URLConnection][a:java/io/InputStream][a:java/util/Scanner][i], Stack: 
+        - [148] Var: ..., Stack: (empty)
+        - [159] Var: ..., Stack: [a:java/lang/Exception]
+        - [161] Var: ..., Stack: (empty)
+  + Method:       i()V
+    Access flags: 0xa
+      = private static void i()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 89, locals = 2, stack = 2):
+      [0] getstatic #82
+        + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
+      [3] ldc #35
+        + String [
+输入网址：]
+      [5] invokeinterface #133
+        + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
+      [10] getstatic #82
+        + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
+      [13] invokeinterface #134
+        + InterfaceMethodref [com/chenfuzi/a/c.b ()V]
+      [18] getstatic #82
+        + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
+      [21] invokeinterface #135
+        + InterfaceMethodref [com/chenfuzi/a/c.f ()Ljava/lang/String;]
+      [26] astore_0 v0
+      [27] aload_0 v0
+      [28] invokevirtual #109
+        + Methodref [java/lang/String.length ()I]
+      [31] ifne +14 (target=45)
+      [34] getstatic #82
+        + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
+      [37] invokeinterface #136
+        + InterfaceMethodref [com/chenfuzi/a/c.g ()V]
+      [42] goto -24 (target=18)
+      [45] getstatic #82
+        + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
+      [48] aload_0 v0
+      [49] invokeinterface #133
+        + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
+      [54] aload_0 v0
+      [55] invokestatic #87
+        + Methodref [com/chenfuzi/a/a.b (Ljava/lang/String;)Z]
+      [58] ifeq +16 (target=74)
+      [61] getstatic #82
+        + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
+      [64] ldc #38
+        + String [
+连接成功！]
+      [66] invokeinterface #133
+        + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
+      [71] goto +17 (target=88)
+      [74] getstatic #82
+        + Fieldref [com/chenfuzi/a/a.c Lcom/chenfuzi/a/c;]
+      [77] ldc #37
+        + String [
+连接失败！]
+      [79] invokeinterface #133
+        + InterfaceMethodref [com/chenfuzi/a/c.a (Ljava/lang/String;)V]
+      [84] goto +4 (target=88)
+      [87] astore_1 v1
+      [88] return
+      Code attribute exceptions (count = 1):
+      - ExceptionInfo (18 -> 84: 87):
+      + Class [java/lang/InterruptedException]
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 5):
+        - [18] Var: ..., Stack: (empty)
+        - [45] Var: ...[a:java/lang/String], Stack: (empty)
+        - [74] Var: ..., Stack: (empty)
+        - [87] Var: , Stack: [a:java/lang/InterruptedException]
+        - [88] Var: ..., Stack: (empty)
 
 Class file attributes (count = 0):
 

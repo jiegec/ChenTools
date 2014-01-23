@@ -34,8 +34,8 @@ import com.chenfuzi.chentoolslib.ChenTools.InputOutput;
  * PURCHASED FOR THIS MACHINE, SO JIGLOO OR THIS CODE CANNOT BE USED LEGALLY FOR
  * ANY CORPORATE OR COMMERCIAL PURPOSE.
  */
+@SuppressWarnings("serial")
 public class ChenToolsGUI extends javax.swing.JFrame implements InputOutput {
-	static final long serialVersionUID = 123456789875053761L;
 	private JTextArea console;
 	private JButton enterbutton;
 	private JTextField entertext;
@@ -167,7 +167,7 @@ public class ChenToolsGUI extends javax.swing.JFrame implements InputOutput {
 			}
 		});
 		thread.start();
-
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
 	}
 
 	public void wantNumber() {
