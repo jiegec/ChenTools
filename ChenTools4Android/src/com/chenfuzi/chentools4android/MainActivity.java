@@ -34,7 +34,7 @@ public class MainActivity extends Activity implements InputOutput {
 	private int currentSelect;
 	private TextView versiontext;
 	
-	private static MainActivity inst;
+	private static MainActivity INSTANCE;
 
 	private static Handler mHandler = new Handler() {
 		public void handleMessage(Message msg) {
@@ -46,9 +46,9 @@ public class MainActivity extends Activity implements InputOutput {
 				enter.setEnabled(true);
 				break;
 			case 2:
-				String currentString = console.getText().toString();
-				currentString += (String) msg.obj.toString();
-				console.setText(currentString);
+				String appendString = (String) msg.obj;
+				CharSequence orig = console.getText();
+				console.setText(orig+appendString);
 				break;
 			case 3:
 				entertext.setText("");
@@ -59,11 +59,11 @@ public class MainActivity extends Activity implements InputOutput {
 			case 5:
 				String version = (String) msg.obj;
 				if (version.equals("")) {
-					new AlertDialog.Builder(MainActivity.inst).setTitle("更新")
+					new AlertDialog.Builder(MainActivity.INSTANCE).setTitle("更新")
 							.setMessage("无法检测更新！").show();
 				}
 				if (version.compareTo(ChenTools.version) > 0) {
-					new AlertDialog.Builder(MainActivity.inst)
+					new AlertDialog.Builder(MainActivity.INSTANCE)
 							.setTitle("更新")
 							.setMessage("检测到新版本！要打开下载链接吗？")
 							.setPositiveButton("跳转",
@@ -77,10 +77,13 @@ public class MainActivity extends Activity implements InputOutput {
 											Intent(
 													"android.intent.action.VIEW",
 													Uri.parse("https://github.com/wiadufachen/ChenTools/blob/master/ChenTools4Andorid.apk?raw=true"));
-											MainActivity.inst.startActivity(viewIntent);
+											MainActivity.INSTANCE.startActivity(viewIntent);
 										}
 									}).setNegativeButton("取消", null).show();
 				}
+				break;
+			case 6:
+				entertext.requestFocus();
 				break;
 			}
 		}
@@ -88,7 +91,7 @@ public class MainActivity extends Activity implements InputOutput {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		inst = this;
+		INSTANCE = this;
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		spinner = (Spinner) findViewById(R.id.spinner1);
@@ -107,7 +110,7 @@ public class MainActivity extends Activity implements InputOutput {
 		syncLock = true;
 		enter.setOnClickListener(new OnClickListener() {
 			public void onClick(View w) {
-				MainActivity.inst.unlock();
+				MainActivity.INSTANCE.unlock();
 			}
 		});
 		ChenTools.io = this;
@@ -138,7 +141,7 @@ public class MainActivity extends Activity implements InputOutput {
 
 	public synchronized boolean lock() throws InterruptedException {
 		while (syncLock == true) {
-			MainActivity.inst.wait();
+			MainActivity.INSTANCE.wait();
 		}
 		syncLock = true;
 		return true;
@@ -146,7 +149,7 @@ public class MainActivity extends Activity implements InputOutput {
 
 	public synchronized void unlock() {
 		syncLock = false;
-		MainActivity.inst.notifyAll();
+		MainActivity.INSTANCE.notifyAll();
 	}
 
 	public void writeToConsole(String str) {
@@ -155,9 +158,8 @@ public class MainActivity extends Activity implements InputOutput {
 
 	public String getInput() throws InterruptedException {
 		mHandler.obtainMessage(1, "").sendToTarget();
-		if (!lock()) {
-			return "Interrupt";
-		}
+		mHandler.obtainMessage(6, "").sendToTarget();
+		lock();
 		String ret = entertext.getText().toString();
 		mHandler.obtainMessage(0, "").sendToTarget();
 		mHandler.obtainMessage(3, "").sendToTarget();
@@ -182,7 +184,7 @@ public class MainActivity extends Activity implements InputOutput {
 		public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2,
 				long arg3) {
 			currentSelect = arg2;
-			MainActivity.this.emptyConsole();
+			MainActivity.INSTANCE.emptyConsole();
 			if (thread != null) {
 				thread.interrupt();
 			}

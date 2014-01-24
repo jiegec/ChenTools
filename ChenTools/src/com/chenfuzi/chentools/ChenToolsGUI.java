@@ -4,6 +4,8 @@ import java.awt.Desktop;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.io.IOException;
 import java.net.URISyntaxException;
 
@@ -72,6 +74,11 @@ public class ChenToolsGUI extends javax.swing.JFrame implements InputOutput {
 				entertext = new JTextField();
 				getContentPane().add(entertext);
 				entertext.setBounds(0, 24, 400, 24);
+				entertext.addKeyListener(new KeyAdapter() {
+					public void keyTyped(KeyEvent evt) {
+						entertextKeyTyped(evt);
+					}
+				});
 			}
 			{
 				enterbutton = new JButton();
@@ -167,15 +174,15 @@ public class ChenToolsGUI extends javax.swing.JFrame implements InputOutput {
 			}
 		});
 		thread.start();
+		enterbutton.setEnabled(false);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		this.setResizable(false);
 	}
 
 	public void wantNumber() {
-
 	}
 
 	public void wantText() {
-
 	}
 
 	public static int currentSelect;
@@ -188,9 +195,7 @@ public class ChenToolsGUI extends javax.swing.JFrame implements InputOutput {
 	};
 
 	public void writeToConsole(String str) {
-		String cur = console.getText();
-		cur += str;
-		console.setText(cur);
+		console.append(str);
 	}
 
 	public synchronized String getInput() throws InterruptedException {
@@ -218,7 +223,8 @@ public class ChenToolsGUI extends javax.swing.JFrame implements InputOutput {
 	private synchronized void enterbuttonActionPerformed(ActionEvent evt) {
 		try {
 			syncLock = false;
-			ChenToolsGUI.this.notifyAll();
+			ChenToolsGUI.this.notify();
+			enterbutton.setEnabled(false);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -235,6 +241,13 @@ public class ChenToolsGUI extends javax.swing.JFrame implements InputOutput {
 			}
 			thread = new Thread(runnable);
 			thread.start();
+		}
+	}
+	
+	private void entertextKeyTyped(KeyEvent evt) {
+		if(evt.getKeyChar() == '\n')
+		{
+			enterbutton.doClick();
 		}
 	}
 }

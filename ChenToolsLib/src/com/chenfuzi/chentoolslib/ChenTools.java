@@ -16,9 +16,9 @@ public class ChenTools {
 			"1.已知二次函数过三点(x1,y1)(x2,y2)(x3,y3)求二次函数解析式。",
 			"2.已知二次函数顶点(x,y)，经过点(x0,y0)。", "3.已知二次函数过两点(x1,y1)(x2,y2)，对称轴x=z。",
 			"4.输入一组数据，得出众数、中位数、平均数、方差、标准差、极差。", "5.求一个表达式的值（只能输入+-*/()和数字）。",
-			"6.已知一次函数过(x1,y1),(x2,y2),求一次函数解析式", "7.输入一个二次函数解析式，输出二次函数的信息",
-			"8.测试能否上指定网址" };
-	public static String version = "2014.01.23.14";
+			"6.已知一次函数过(x1,y1),(x2,y2),求一次函数解析式。", "7.输入一个二次函数解析式，输出二次函数的信息。",
+			"8.测试能否上指定网址。" };
+	public static String version = "2014.01.24.16";
 
 	public interface InputOutput {
 		void writeToConsole(String str);
@@ -40,27 +40,23 @@ public class ChenTools {
 		InputStream inStream = null;
 		Scanner s = null;
 		String ret = "";
-		try
-		{
+		try {
 			url = new URL(httpUrl);
 			conn = url.openConnection();
 			inStream = conn.getInputStream();
-			s = new Scanner(inStream).useDelimiter("\\A");
-			ret = s.hasNext() ? s.next(): "";
-		}catch(Exception e)
-		{
+			s = new Scanner(inStream);
+			s.useDelimiter("\\A");
+			ret = s.hasNext() ? s.next() : "";
+		} catch (Exception e) {
 			ret = "";
-		}finally
-		{			
+		} finally {
 			try {
-				if(s != null)
-				{
+				if (s != null) {
 					s.close();
 				}
-				if(inStream != null)
-				{
+				if (inStream != null) {
 					inStream.close();
-				}				
+				}
 			} catch (Exception e) {
 			}
 		}
@@ -85,22 +81,10 @@ public class ChenTools {
 		return ret;
 	}
 
-	@SuppressWarnings("unused")
-	private static Integer getInteger() throws InterruptedException {
-		String d;
-		Integer ret;
-		io.wantNumber();
-		while (true) {
-			d = io.getInput();
-			try {
-				ret = Integer.valueOf(d);
-			} catch (Exception e) {
-				io.inputError();
-				continue;
-			}
-			break;
-		}
-		io.writeToConsole(d);
+	private static String getString() throws InterruptedException {
+		String ret;
+		io.wantText();
+		ret = io.getInput();
 		return ret;
 	}
 
@@ -224,42 +208,26 @@ public class ChenTools {
 
 	}
 
-	@SuppressWarnings("unchecked")
 	private static void tool4() {
 		try {
-			Integer num = 1, i;
-			io.writeToConsole("\n请输入数据个数");
-			do {
-				String d;
-				io.wantNumber();
-				while (true) {
-					d = io.getInput();
-					try {
-						num = Integer.valueOf(d);
-					} catch (Exception e) {
-						io.inputError();
-						continue;
-					}
-					break;
-				}
-				if (num <= 0) {
-					io.inputError();
-					continue;
-				}
-				io.writeToConsole(d);
-			} while (num.intValue() <= 0);
-			ArrayList<Double> nums = new ArrayList<Double>(num);
+			Integer num, i;
+			ArrayList<Double> nums = new ArrayList<Double>();
 			Double sum = 0.0;
 			Double fangcha = 0.0;
-			io.writeToConsole("\n请输入数据");
-			for (i = 0; i < num - 1; i++) {
-				nums.add(getDouble());
+			io.writeToConsole("\n请输入数据（可以一次输入多个，用','分隔）：");
+			String str = getString();
+			Scanner s = new Scanner(str);
+			s.useDelimiter(",");
+			while (s.hasNextDouble()) {
+				Double temp = s.nextDouble();
+				nums.add(temp);
+				io.writeToConsole(String.valueOf(temp));
 				io.writeToConsole(",");
-				sum += nums.get(i);
+				sum += temp;
 			}
-			nums.add(getDouble());
-			sum += nums.get(i);
-			ArrayList<Double> temp = (ArrayList<Double>) nums.clone();
+			s.close();
+			num = nums.size();
+			ArrayList<Double> temp = new ArrayList<Double>(nums);
 			io.writeToConsole("\n平均数：");
 			io.writeToConsole(String.valueOf((sum / num)));
 			for (i = 0; i < num; i++) {
@@ -419,28 +387,22 @@ public class ChenTools {
 		InputStream inStream = null;
 		Scanner s = null;
 		boolean ret = false;
-		try
-		{
+		try {
 			url = new URL(httpUrl);
 			conn = url.openConnection();
 			inStream = conn.getInputStream();
 			s = new Scanner(inStream).useDelimiter("\\A");
-			ret = s.hasNext() ? (s.next().length() != 0 ? true : false)
-					: false;
-		}catch(Exception e)
-		{
+			ret = s.hasNext() ? (s.next().length() != 0 ? true : false) : false;
+		} catch (Exception e) {
 			ret = false;
-		}finally
-		{			
+		} finally {
 			try {
-				if(s != null)
-				{
+				if (s != null) {
 					s.close();
 				}
-				if(inStream != null)
-				{
+				if (inStream != null) {
 					inStream.close();
-				}				
+				}
 			} catch (Exception e) {
 			}
 		}
@@ -448,7 +410,7 @@ public class ChenTools {
 	}
 
 	private static void tool8() {
-		io.writeToConsole("\n输入网址：");
+		io.writeToConsole("\n输入网址（请输入完整地址，如http://www.qq.com/）：");
 		String input;
 		io.wantText();
 		try {

@@ -1069,6 +1069,5 @@ com.chenfuzi.chentools4android.R$string
 com.chenfuzi.chentools4android.R$style
 com.chenfuzi.chentoolslib.ChenTools:
     14:14:public ChenTools()
-    92:104:private static java.lang.Integer getInteger()
 com.chenfuzi.chentoolslib.StringToArithmetic:
     9:10:private StringToArithmetic()

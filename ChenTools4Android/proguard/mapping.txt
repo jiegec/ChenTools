@@ -1418,7 +1418,7 @@ com.chenfuzi.chentools4android.MainActivity -> com.chenfuzi.chentools4android.Ma
     boolean syncLock -> g
     int currentSelect -> h
     android.widget.TextView versiontext -> i
-    com.chenfuzi.chentools4android.MainActivity inst -> j
+    com.chenfuzi.chentools4android.MainActivity INSTANCE -> j
     android.os.Handler mHandler -> k
     java.lang.Runnable runnable -> a
     void onCreate(android.os.Bundle) -> onCreate
@@ -1463,18 +1463,19 @@ com.chenfuzi.chentoolslib.ChenTools -> com.chenfuzi.a.a:
     com.chenfuzi.chentoolslib.ChenTools$InputOutput io -> c
     java.lang.String httpDownload(java.lang.String) -> a
     java.lang.Double getDouble() -> a
+    java.lang.String getString() -> b
     void work(int) -> a
     void format1(java.lang.Double,java.lang.Double,java.lang.Double) -> a
     void format2(java.lang.Double,java.lang.Double) -> a
-    void tool1() -> b
-    void tool2() -> c
-    void tool3() -> d
-    void tool4() -> e
-    void tool5() -> f
-    void tool6() -> g
-    void tool7() -> h
+    void tool1() -> c
+    void tool2() -> d
+    void tool3() -> e
+    void tool4() -> f
+    void tool5() -> g
+    void tool6() -> h
+    void tool7() -> i
     boolean canConnectTo(java.lang.String) -> b
-    void tool8() -> i
+    void tool8() -> j
 com.chenfuzi.chentoolslib.ChenTools$1 -> com.chenfuzi.a.b:
     int compare(java.util.Map$Entry,java.util.Map$Entry) -> a
     int compare(java.lang.Object,java.lang.Object) -> compare
