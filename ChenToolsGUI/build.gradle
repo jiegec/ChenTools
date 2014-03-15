@@ -1,0 +1,15 @@
+apply plugin: 'java'
+
+dependencies {
+    compile project(':ChenToolsLib')
+}
+
+
+jar {
+    manifest { attributes 'Main-Class': 'jiajiechen.chentoolsgui.ChenToolsGUI' }
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+}
+
+tasks.withType(Compile) {
+    options.encoding = 'UTF-8'
+}

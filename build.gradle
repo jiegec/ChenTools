@@ -1,0 +1,16 @@
+subprojects {
+    repositories { mavenCentral() }
+    apply plugin: 'pmd'
+}
+defaultTasks 'build', 'copyBinaries', 'check'
+
+task copyBinaries(type: Copy) {
+    copy {
+        from 'ChenTools4Android/build/apk'
+        into "$projectDir"
+    }
+    copy {
+        from 'ChenToolsGUI/build/libs'
+        into "$projectDir"
+    }
+}

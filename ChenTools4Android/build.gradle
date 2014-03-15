@@ -1,0 +1,58 @@
+buildscript {
+    repositories { mavenCentral() }
+    dependencies { classpath 'com.android.tools.build:gradle:0.8.+' }
+}
+apply plugin: 'android'
+
+dependencies {
+    compile files('libs/android-support-v4.jar')
+    compile project(':ChenToolsLib')
+}
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "19.0.1"
+
+    defaultConfig {
+        minSdkVersion 8
+        targetSdkVersion 19
+    }
+
+    signingConfigs {
+        myConfig {
+            storeFile file("android.keystore")
+            storePassword "testtest"
+            keyAlias "android.keystore"
+            keyPassword "testtest"
+        }
+    }
+
+    buildTypes {
+        release {
+            runProguard true
+            signingConfig signingConfigs.myConfig
+            proguardFile getDefaultProguardFile('proguard-android.txt')
+            zipAlign true
+        }
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+
+            resources.srcDirs = ['src']
+            aidl.srcDirs = ['src']
+
+            renderscript.srcDirs = ['src']
+
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+
+        }
+
+
+        instrumentTest.setRoot('tests')
+    }
+}
+
